@@ -1,0 +1,63 @@
+body
+{
+	background-color: #AAAAFF;
+}
+
+h1
+{
+	color: blue;
+	font-size: 20px;
+	font-family: Verdana;
+	position:relative;
+	left: 45%;
+	width: 133px;
+	border: 3px solid blue;
+}
+
+liste
+{
+	position:relative;
+	left: 40%;
+	font-size: 15px;
+	width: 150px;
+}
+
+header
+{
+	margin-left: 200px;
+	border: 1px solid green;
+	margin-right: 200px;
+	text-align: center;
+}
+
+section
+{
+	color: black;
+	font-size: 15px;
+	font-family: Arial;
+	position:relative;
+	top:20px;
+	margin-left: 200px;
+	border: 1px solid black;
+	margin-right: 200px;
+	text-align: center;
+
+}
+
+intro
+{
+	color: white;
+	font-size: 15px;
+	font-family: Arial;
+	position:relative;
+}
+
+p
+{
+	position: relative;
+	font-size:15px;
+	left:20px;
+}
+li.menu {
+	display:inline;
+}
