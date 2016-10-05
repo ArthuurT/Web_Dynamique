@@ -1,15 +1,13 @@
 body
 {
-	background-color: #AAAAFF;
+	background-color: #4682B4;
 }
 
 h1
 {
-	color: blue;
-	font-size: 20px;
-	font-family: Verdana;
-	width: 133px;
-	border: 3px solid blue;
+	color: white;
+	font-size: 30px;
+	font-family: Arial;
 }
 
 
@@ -30,10 +28,12 @@ nav
 header
 {
 	margin-left: 20%;
-	border: 1px solid green;
+	background-image: url(../Images/Dirt.jpg);
+	background-size: 800px 200px;
 	margin-right: 20%;
-	text-align: center;
 	margin-bottom: 5px;
+	text-align: center;
+	height: 100px;
 
 }
 section
@@ -41,6 +41,9 @@ section
 	margin-left: 20%;
 	margin-right: 20%;
 	margin-bottom: 10px;
+
+}
+
 
 }
 
@@ -65,9 +68,13 @@ section
 	
 }
 
-p
+p.slogan
 {
-	font-size:15px;
+	color: white;
+	font-size: 20px;
+	font-family: Arial;
+	font-style: italic;
+
 }
 
 li.menu 
