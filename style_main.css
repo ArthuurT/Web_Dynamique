@@ -16,12 +16,12 @@ nav
 {
 	
 	
-	margin-right: 10%;
-	margin-left: 10%;
-	border: 1px solid black;
+	margin-right: 0%;
+	padding-top: 0.1%;
 	text-align: center;
 	font-size: 15px;
-	margin-bottom: 20px;
+	color: white;
+	margin-bottom: 7%;
 
 
 }
@@ -30,7 +30,7 @@ header
 {
 	margin-left: 0;
 	margin-right: 0;
-	margin-bottom: 5px;
+	margin-bottom: 0;
 	background-image: url(Images/Dirt.jpg);
 	background-size: 800px 200px;
 	text-align: center;
@@ -42,7 +42,7 @@ section
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-bottom: 30px;
-
+	background-color: #7F664C;
 }
 
 
@@ -54,7 +54,7 @@ section
 	font-size: 15px;
 	font-family: georgia;
 	margin-bottom: 10%;
-	text-align: justify;
+	
 }
 tr.entete
 {
@@ -69,15 +69,17 @@ tr.entete
 tr.zone
 {
 	background-color: #7F664C;
+	text-align: justify;
 }
 td
 {
 	position: sticky;
 	border: 1px solid black;
 	border-radius: 5px;
-	box-shadow: 6px 6px 6px black;
+	box-shadow: 2px 2px 2px black;
 	border-collapse: collapse;
-	padding-left: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 
 }
 
