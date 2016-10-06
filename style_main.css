@@ -16,12 +16,11 @@ nav
 {
 	
 	
-	margin-right: 0%;
-	padding-top: 0.1%;
-	text-align: center;
-	font-size: 15px;
+	margin-left: 10%;
+	text-align: left;
+	font-size: 30px;
 	color: white;
-	margin-bottom: 7%;
+	margin-bottom: 3%;
 
 
 }
@@ -137,4 +136,9 @@ li.menu_footer
 	margin-left: 1%;
 	padding: 0.4%;
 
+}
+
+.menu
+{
+	border: 2px solid black;
 }
