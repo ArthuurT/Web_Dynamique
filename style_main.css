@@ -16,8 +16,8 @@ nav
 {
 	
 	
-	margin-right: 20%;
-	margin-left: 20%;
+	margin-right: 10%;
+	margin-left: 10%;
 	border: 1px solid black;
 	text-align: center;
 	font-size: 15px;
@@ -28,19 +28,19 @@ nav
 
 header
 {
-	margin-left: 20%;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 5px;
 	background-image: url(Images/Dirt.jpg);
 	background-size: 800px 200px;
-	margin-right: 20%;
-	margin-bottom: 5px;
 	text-align: center;
-	height: 100px;
+	height: 30%;
 
 }
 section
 {
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 10%;
+	margin-right: 10%;
 	margin-bottom: 30px;
 
 }
@@ -72,7 +72,13 @@ tr.zone
 }
 td
 {
+	position: sticky;
 	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 6px 6px 6px black;
+	border-collapse: collapse;
+	padding-left: 15px;
+
 }
 
 .intro
