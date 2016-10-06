@@ -48,13 +48,25 @@ section
 }
 
 .fond
-{
+{	
 	color: black;
 	font-size: 15px;
-	font-family: Arial;
-	border: 1px solid black;
-	margin-bottom: 10px;
+	font-family: georgia;
+	margin-bottom: 10%;
 	text-align: justify;
+}
+tr.entete
+{
+	text-align: center;
+	font-size: 20px;
+	font-family: New York;
+	color: #228B22;
+	font-weight: bold;
+
+}
+td
+{
+	border: 1px solid black;
 }
 
 .intro
@@ -71,7 +83,7 @@ section
 p.slogan
 {
 	color: white;
-	font-size: 20px;
+	font-size: 15px;
 	font-family: Arial;
 	font-style: italic;
 
@@ -85,8 +97,17 @@ li.menu
 
 footer
 {
-
+	display: table-row;
+	border: 1px solid black;
+	margin-top: 10%;
 	margin-left: 20%;
 	margin-right: 20%;
+	
+}
+
+li.menu_footer 
+{
+	display:inline;
 	border: 1px solid black;
+	margin-right: 1%;
 }
