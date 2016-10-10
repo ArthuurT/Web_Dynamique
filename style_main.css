@@ -1,6 +1,15 @@
-body
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #cccccc;
+}
+html {
+	height: 100%;
+}
+body 
 {
-	background-color: #4682B4;
+	min-height: 100%;
+	background-color: #FFFFFF;
 	position: relative;
 }
 
@@ -21,27 +30,25 @@ nav
 	font-size: 30px;
 	color: white;
 	margin-bottom: 3%;
-
-
 }
 
 header
 {
-	margin-left: 0;
-	margin-right: 0;
-	margin-bottom: 0;
 	background-image: url(Images/Dirt.jpg);
 	background-size: 800px 200px;
 	text-align: center;
-	height: 30%;
+	height: 40%;
+	margin-bottom: 0%;
+	margin-left: 10%;
+	margin-right: 10%;
+	
 
 }
 section
 {
 	margin-left: 10%;
 	margin-right: 10%;
-	margin-bottom: 30px;
-	background-color: #7F664C;
+	background-color: #FFFFFF;
 }
 
 
@@ -62,12 +69,12 @@ tr.entete
 	font-family: New York;
 	color: #33AF11;
 	font-weight: bold;
-	background-color: #7F664C;
+	background-color: #FFFFFF;
 
 }
 tr.zone
 {
-	background-color: #7F664C;
+	background-color: #FFFFFF;
 	text-align: justify;
 }
 td
@@ -84,7 +91,7 @@ td
 
 .intro
 {
-	color: white;
+	color: #000000;
 	font-size: 15px;
 	border: 1px solid black;
 	font-family: Arial;
@@ -136,9 +143,4 @@ li.menu_footer
 	margin-left: 1%;
 	padding: 0.4%;
 
-}
-
-.menu
-{
-	border: 2px solid black;
 }
