@@ -37,7 +37,7 @@ header
 	margin-bottom: 2%;
 	margin-left: 10%;
 	margin-right: 10%;
-	padding-bottom: 2%;
+	padding-bottom: 10px;
 	
 
 }
@@ -73,7 +73,6 @@ tr.zone
 }
 td
 {
-	position: sticky;
 	border: 1px solid black;
 	border-radius: 5px;
 	box-shadow: 2px 2px 2px black;
@@ -117,30 +116,34 @@ li.menu
 
 footer
 {
+	
 	position: absolute;
-	text-align: center;
 	width: 100%;
-	height: 5%;
+	height: 10%;
 	display: table-row;
-	color:##293133;
+	text-align: center;
+	margin-top: 2%;
+	color: white;
+	background-color: #293133;
+
 
 }
 li.menu_logo_gauche
 {
 	display:inline;
-	padding-right:15%; 
+	padding-right:1%; 
 }
 li.menu_logo_droit
 {
 	display:inline;
-	padding-left:15%;
+	padding-left:1%;
 }
 
 li.menu_footer 
 {
 	display:inline;
-	margin-right: 1%;
-	margin-left: 1%;
+	margin-right: 0%;
+	margin-left: 0%;
 	padding: 0.4%;
 
 }
@@ -149,7 +152,6 @@ li.menu_footer
 {
 	position: absolute;
 	height: 20%;
-	left:15%;
-
-
+	left:11%;
+	top: 2%;
 }
