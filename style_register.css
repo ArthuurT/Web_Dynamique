@@ -19,11 +19,6 @@ nav
 	color: white;
 	margin-bottom: 3%;
 }
-a.lien_menu
-{
-	color: white;
-	text-decoration: none;
-}
 
 .separateur
 {
@@ -128,11 +123,6 @@ li.menu_footer
 	margin-left: 0%;
 	padding: 0.4%;
 
-}
-a.lien_footer
-{
-	color: #77CCEE;
-	text-decoration: none;
 }
 #logo
 {
