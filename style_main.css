@@ -20,6 +20,12 @@ nav
 	margin-bottom: 3%;
 }
 
+a.lien_menu
+{
+	color: white;
+	text-decoration: none;
+}
+
 .separateur
 {
 color:white;
@@ -28,6 +34,12 @@ display: inline;
 position:relative;
 left:20px;
 top: 20px;
+}
+
+a
+{
+	color: #77CCEE;
+	text-decoration: none;
 }
 
 header
@@ -125,7 +137,6 @@ footer
 	margin-top: 2%;
 	color: white;
 	background-color: #293133;
-	opacity: 0.8;
 
 }
 li.menu_logo_gauche
@@ -155,3 +166,4 @@ li.menu_footer
 	left:11%;
 	top: 2%;
 }
+
