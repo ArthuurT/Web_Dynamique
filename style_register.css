@@ -1,3 +1,8 @@
+/*                            ==============
+                              =page globale=
+                              ==============
+*/
+
 html {
 	height: 100%;
 	background-color: #77CCEE;
@@ -6,6 +11,31 @@ body
 {
 	min-height: 100%;
 	position: relative;
+}
+
+/*                            ==============
+                              =   Header   =
+                              ==============
+*/ 
+
+p.slogan
+{
+	color: white;
+	font-size: 15px;
+	font-family: Arial;
+	font-style: italic;
+	margin-top: 0%;
+	padding-right: 20%;
+	padding-top: 2%
+
+}
+
+#logo
+{
+	position: absolute;
+	height: 20%;
+	left:11%;
+	top: 2%;
 }
 
 nav
@@ -19,6 +49,12 @@ nav
 	color: white;
 	margin-bottom: 3%;
 }
+
+li.menu 
+{
+	display:inline;
+	padding-left: 2%;
+}  
 
 a.lien_menu
 {
@@ -36,14 +72,10 @@ left:20px;
 top: 20px;
 }
 
-a.lien_footer
-{
-	color: #77CCEE;
-	text-decoration: none;
-}
 
 header
 {
+	border-radius: 5px;
 	background-color: #293133;
 	text-align: center;
 	margin-bottom: 2%;
@@ -53,8 +85,15 @@ header
 	
 
 }
+
+/*                            ==================
+                              =coprs de la page=
+                              ==================
+*/ 
+
 section
 {
+	border-radius: 5px;
 	margin-left: 10%;
 	margin-right: 10%;
 }
@@ -86,36 +125,23 @@ td
 	
 }
 
-p.slogan
-{
-	color: white;
-	font-size: 15px;
-	font-family: Arial;
-	font-style: italic;
-	margin-top: 0%;
-	padding-right: 20%;
-	padding-top: 2%
-
-}
-
-li.menu 
-{
-	display:inline;
-	padding-left: 2%;
-}  
-
+/*                            ==============
+                              =   Footer   =
+                              ==============
+*/ 
 
 footer
 {
 	position: absolute;
-	width: 100%;
+	width: 80%;
 	height: 8%;
 	display: table-row;
 	text-align: center;
 	margin-top: 2%;
+	margin-left: 10%;
 	color: white;
 	background-color: #293133;
-
+	border-radius: 5px;
 }
 li.menu_logo_gauche
 {
@@ -136,13 +162,9 @@ li.menu_footer
 	padding: 0.4%;
 
 }
-#logo
+a.lien_footer
 {
-	position: absolute;
-	height: 20%;
-	left:11%;
-	top: 2%;
-
-
+	color: #77CCEE;
+	text-decoration: none;
 }
 

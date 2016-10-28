@@ -1,3 +1,8 @@
+/*                            ==============
+                              =page globale=
+                              ==============
+*/ 
+
 html {
 	height: 100%;
 	background-color: #77CCEE;
@@ -6,6 +11,31 @@ body
 {
 	min-height: 100%;
 	position: relative;
+}
+
+/*                            ==============
+                              =   Header   =
+                              ==============
+*/ 
+
+p.slogan
+{
+	color: white;
+	font-size: 15px;
+	font-family: Arial;
+	font-style: italic;
+	margin-top: 0%;
+	padding-right: 20%;
+	padding-top: 2%
+
+}
+
+#logo
+{
+	position: absolute;
+	height: 20%;
+	left:11%;
+	top: 2%;
 }
 
 nav
@@ -19,6 +49,12 @@ nav
 	color: white;
 	margin-bottom: 3%;
 }
+
+li.menu 
+{
+	display:inline;
+	padding-left: 2%;
+}  
 
 a.lien_menu
 {
@@ -36,30 +72,39 @@ left:20px;
 top: 20px;
 }
 
-a
-{
-	color: #77CCEE;
-	text-decoration: none;
-}
 
 header
 {
+	border-radius: 5px;
 	background-color: #293133;
 	text-align: center;
 	margin-bottom: 2%;
 	margin-left: 10%;
 	margin-right: 10%;
 	padding-bottom: 10px;
-	
-
 }
+
+/*                            ==================
+                              =coprs de la page=
+                              ==================
+*/ 
+
 section
 {
 	margin-left: 10%;
 	margin-right: 10%;
 }
 
-
+.intro
+{
+	border-radius: 5px;
+	color:white;
+	font-size: 15px;
+	border: 1px solid black;
+	font-family: Arial;
+	margin-bottom: 10px;
+	text-align: center;
+	background-color: #293133;	
 }
 
 .fond
@@ -67,6 +112,7 @@ section
 	font-size: 15px;
 	font-family: georgia;
 }
+
 tr.entete
 {
 	text-align: center;
@@ -94,47 +140,21 @@ td
 
 }
 
-.intro
-{
-	color:white;
-	font-size: 15px;
-	border: 1px solid black;
-	font-family: Arial;
-	margin-bottom: 10px;
-	text-align: center;
-	background-color: #293133;
-
-	
-}
-
-p.slogan
-{
-	color: white;
-	font-size: 15px;
-	font-family: Arial;
-	font-style: italic;
-	margin-top: 0%;
-	padding-right: 20%;
-	padding-top: 2%
-
-}
-
-li.menu 
-{
-	display:inline;
-	padding-left: 2%;
-}  
-
+/*                            ==============
+                              =   Footer   =
+                              ==============
+*/ 
 
 footer
 {
-	
+	border-radius: 5px;
 	position: absolute;
-	width: 100%;
-	height: 10%;
+	width: 80%;
+	height: 8%;
 	display: table-row;
 	text-align: center;
 	margin-top: 2%;
+	margin-left: 10%;
 	color: white;
 	background-color: #293133;
 
@@ -159,11 +179,9 @@ li.menu_footer
 
 }
 
-#logo
+a.lien_footer
 {
-	position: absolute;
-	height: 20%;
-	left:11%;
-	top: 2%;
+	color: #77CCEE;
+	text-decoration: none;
 }
 
