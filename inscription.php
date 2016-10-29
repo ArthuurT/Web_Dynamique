@@ -33,7 +33,7 @@
 		
 			<section class="intro">
 
-				<form>
+				<form method="post">
 					<p class="titre"> INSCRIPTION </p>
 					<p class="section_formulaire">
 						Mes Identifiants
@@ -41,7 +41,7 @@
 					<p class="formulaire">
 						Indentifiant : <input name="ident" /><br/><br/>
 						Mot de Passe : <input type="password" name="passwd" /><br/><br/>
-						Confirmer votre Mot de Passe : <input type="password" name="passwd" /><br/><br/>
+						Confirmer votre Mot de Passe : <input type="password" name="conf_passwd" /><br/><br/>
 					</p>
 					<p class="section_formulaire">
 						Mes Coordonnées
@@ -111,11 +111,37 @@
 						Recevoir les Offres et les Bons Plans
 					</p>
 					<p class="formulaire">
-						de MineTek : &emsp;<input type="radio" name="media" value="1"/> Oui
-						&emsp;&emsp;&emsp;<input type="radio" name="media" value="0" checked="checked"/> Non <br/><br/>
-						de nos Partenaires : &emsp;<input type="radio" name="media" value="1"/> Oui
-						&emsp;&emsp;&emsp;<input type="radio" name="media" value="0" checked="checked"/> Non
+						de MineTek : &emsp;<input type="radio" name="mine" value="1"/> Oui
+						&emsp;&emsp;&emsp;<input type="radio" name="mine" value="0" checked="checked"/> Non <br/><br/>
+						de nos Partenaires : &emsp;<input type="radio" name="part" value="1"/> Oui
+						&emsp;&emsp;&emsp;<input type="radio" name="part" value="0" checked="checked"/> Non
 					</p>
+					<br/>
+					<p class="bouttons">
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						<input type="submit" value="effacer" name="Effacer"/>
+						<input type="submit" value="envoyer" name="Envoyer"/>
+					</p>
+				</form>
+
+				<?php 
+					if(isset($_POST["Envoyer"])) 
+					{
+						if(!empty($_POST["ident"])&&!empty($_POST["passwd"])&&!empty($_POST["conf_passwd"])&&($_POST["passwd"]==$_POST["conf_passwd"])&&!empty($_POST["media"])&&!empty($_POST["nom"])&&!empty($_POST["prenom"])&&!empty($_POST["jour"])&&!empty($_POST["mois"])&&!empty($_POST["an"])&&($_POST["an"]<1998)&&!empty($_POST["rue"])&&!empty($_POST["cdp"])&&!empty($_POST["ville"])&&!empty($_POST["pays"])&&!empty($_POST["phone"])&&!empty($_POST["mine"])&&!empty($_POST["part"]))
+						{
+
+						}
+						else echo "veuillez saisir touts les champs avant d'envoyer";
+					}
+					if(isset($_POST["Effacer"]))
+					{
+
+					}
+
+				?>
+
 			</section>
 	</body>
 	<footer>
