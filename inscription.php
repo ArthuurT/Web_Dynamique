@@ -14,7 +14,7 @@
 		<header>
 
 			<p class="slogan"> La ludothèque libre pour tous ! </p>
-			<img id=logo src="Images/logo_blue.svg"/>
+			<a id=logo href="main.php"> <img src="Images/logo_blue.svg"/> </a> 
 			<nav>
 
 				<ul>
@@ -131,14 +131,14 @@
 			<?php 
 					if(isset($_POST["Envoyer"])) 
 					{
-						if(!empty($_POST["ident"])&&!empty($_POST["passwd"])&&!empty($_POST["conf_passwd"])&&($_POST["passwd"]==$_POST["conf_passwd"])&&!empty($_POST["media"])&&!empty($_POST["nom"])&&!empty($_POST["prenom"])&&!empty($_POST["jour"])&&!empty($_POST["mois"])&&!empty($_POST["an"])&&($_POST["an"]<1998)&&!empty($_POST["rue"])&&!empty($_POST["cdp"])&&!empty($_POST["ville"])&&!empty($_POST["pays"])&&!empty($_POST["phone"])&&!empty($_POST["mine"])&&!empty($_POST["part"]))
+						if(!empty($_POST["ident"])&&!empty($_POST["passwd"])&&!empty($_POST["conf_passwd"])&&($_POST["passwd"]==$_POST["conf_passwd"])&&!empty($_POST["media"])&&!empty($_POST["nom"])&&!empty($_POST["prenom"])&&!empty($_POST["jour"])&&!empty($_POST["mois"])&&!empty($_POST["an"])&&($_POST["an"]<1998)&&!empty($_POST["rue"])&&!empty($_POST["cdp"])&&!empty($_POST["ville"])&&!empty($_POST["pays"])&&!empty($_POST["phone"]))
 						{
 
 						}
 						else 
 						{
 							echo '<p class="commentaire">';
-							if(empty($_POST["ident"])||empty($_POST["passwd"])||empty($_POST["conf_passwd"])||empty($_POST["media"])||empty($_POST["nom"])||empty($_POST["prenom"])||empty($_POST["jour"])||empty($_POST["mois"])||empty($_POST["an"])||empty($_POST["rue"])||empty($_POST["cdp"])||empty($_POST["ville"])||empty($_POST["pays"])||empty($_POST["phone"])||empty($_POST["mine"])||empty($_POST["part"]))
+							if(empty($_POST["ident"])||empty($_POST["passwd"])||empty($_POST["conf_passwd"])||empty($_POST["media"])||empty($_POST["nom"])||empty($_POST["prenom"])||empty($_POST["jour"])||empty($_POST["mois"])||empty($_POST["an"])||empty($_POST["rue"])||empty($_POST["cdp"])||empty($_POST["ville"])||empty($_POST["pays"])||empty($_POST["phone"]))
 							{
 								echo 'veuillez compléter touts les champs puis envoyer.';
 								echo '<br/>';

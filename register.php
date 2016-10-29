@@ -14,7 +14,7 @@
 		<header>
 
 			<p class="slogan"> La ludothèque libre pour tous ! </p>
-			<img id=logo src="Images/logo_blue.svg"/>
+			<a id=logo href="main.php"> <img src="Images/logo_blue.svg"/> </a> 
 			<nav>
 
 				<ul>

@@ -16,7 +16,7 @@
 		<header>
 
 			<p class="slogan"> La ludothèque libre pour tous ! </p>
-			<img id=logo src="Images/logo_blue.svg"/>
+			<a id=logo href="main.php"> <img src="Images/logo_blue.svg"/> </a> 
 			<nav>
 
 				<ul>
@@ -64,7 +64,7 @@
 					<tr class="zone">
 
 						<td>
-							<p> 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis imperdiet ante. Nulla faucibus elementum pulvinar. Aenean et enim fermentum, tristique nunc nec, scelerisque lorem. Mauris metus urna, mattis quis dignissim a, commodo ultricies nisl. Morbi enim nisi, cursus eu velit sed, venenatis porta lorem. Vestibulum non porta dolor, quis molestie orci. Pellentesque tempus porta velit, id ullamcorper lectus egestas eget. Nullam tempus tristique tempus. Nunc vel fringillmkljeupv,cuuizîg;iô#~ji t,pr;gtja erat. Proin quis vehicula mi. Morbi sed orci condimentum, lacinia lorem at, ultrices orci. Nullam dapibus volutpat neque vel viverra. Aenean augue augue, euismod non ultrices a, ultrices in purus. Curabitur in nibh ac mi rhoncus finibus.</p>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis imperdiet ante. Nulla faucibus elementum pulvinar. Aenean et enim fermentum, tristique nunc nec, scelerisque lorem. Mauris metus urna, mattis quis dignissim a, commodo ultricies nisl. Morbi enim nisi, cursus eu velit sed, venenati tibulum non porta dolor, quis molestie orci. Pellentesque tempus porta velit, id ullamcorper lectus egestas eget. Nullam tempus tristique tempus. Nunc vel fringillmkljeupv,cuuizîg;iô#~ji t,pr;gtja erat. Proin quis vehicula mi. Morbi sed orci condimentum, lacinia lorem at, ultrices orci. Nullam dapibus volutpat neque vel viverra. Aenean augue augue, euismod non ultrices a, ultrices in purus. Curabitur in nibh ac mi rhoncus finibus.</p>
 						</td>
 						
 						<td>
