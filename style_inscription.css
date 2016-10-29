@@ -33,9 +33,9 @@ p.slogan
 #logo
 {
 	position: absolute;
-	height: 20%;
-	left:11%;
-	top: 2%;
+	height: 14%;
+	padding-left:10px;
+	top: 20px;
 }
 
 nav
@@ -78,7 +78,7 @@ header
 	border-radius: 5px;
 	background-color: #293133;
 	text-align: center;
-	margin-bottom: 2%;
+	margin-bottom: 40px;
 	margin-left: 10%;
 	margin-right: 10%;
 	padding-bottom: 10px;
@@ -145,6 +145,11 @@ p.section_formulaire
 	font-weight: bold;
 	background-color: #77CCEE;
 
+}
+p.commentaire
+{
+	color: #FF0000;
+	text-align: center;
 }
 
 /*                            ==============
