@@ -21,7 +21,7 @@
 
 				<ul>
 
-					<li class = "menu"><a class="lien_menu" href=#>Acceuil</a></li>
+					<li class = "menu"><a class="lien_menu" href="main.php">Acceuil</a></li>
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
 					<div class="separateur"> | </div>

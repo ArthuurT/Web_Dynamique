@@ -19,7 +19,7 @@
 
 				<ul>
 
-					<li class = "menu"><a class="lien_menu" href=#>Acceuil</a></li>
+					<li class = "menu"><a class="lien_menu" href="main.php">Acceuil</a></li>
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
 					<div class="separateur"> | </div>
@@ -37,7 +37,7 @@
 					<h1> IDENTIFICATION <h1><br/><br/>
 					Indentifiant: <input name="ident" /><br/><br/>
 					Mot de Passe: <input type="password" name="passwd" /><br/><br/><br/>
-					<a href=#> Créer un compte </a>
+					<a href="inscription.php"> Créer un compte </a>
 
 			</section>
 	</body>
