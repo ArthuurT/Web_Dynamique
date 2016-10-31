@@ -86,8 +86,12 @@ header
 
 }
 
+input[type="submit"]{
+ cursor:pointer;
+}
+
 /*                            ==================
-                              =coprs de la page=
+                              =corps de la page=
                               ==================
 */ 
 
