@@ -39,7 +39,7 @@
 						Mes Identifiants
 					</p>
 					<p class="formulaire">
-						Indentifiant : <input name="ident" /><br/><br/>
+						Indentifiant : <input type="text" name="ident" placeholder=" mail " ><br/><br/>
 						Mot de Passe : <input type="password" name="passwd" /><br/><br/>
 						Confirmer votre Mot de Passe : <input type="password" name="conf_passwd" /><br/><br/>
 					</p>
@@ -63,15 +63,15 @@
 						</select>
 
 						<select name="mois" size="1">
-							<option value="1">Janvier</option>
-							<option value="2">Févreier</option>
-							<option value="3">Mars</option>
-							<option value="4">Avril</option>
-							<option value="5">Mai</option>
-							<option value="6">Juin</option>
-							<option value="7">Juillet</option>
-							<option value="8">Août</option>
-							<option value="9">Septembre</option>
+							<option value="01">Janvier</option>
+							<option value="02">Févreier</option>
+							<option value="03">Mars</option>
+							<option value="04">Avril</option>
+							<option value="05">Mai</option>
+							<option value="06">Juin</option>
+							<option value="07">Juillet</option>
+							<option value="08">Août</option>
+							<option value="09">Septembre</option>
 							<option value="10">Octobre</option>
 							<option value="11">Novembre</option>
 							<option value="12">Décembre</option>
@@ -100,11 +100,11 @@
 
 							<option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option>
 						</select><br/><br/>
-						adresse : <input name="rue" /><br/><br/>
-						Batiment, Etage, lieu dit : <input name="compl" /><br/><br/>
-						Code Postale : <input name="cdp" /><br/><br/>
-						Ville : <input name="ville" /><br/><br/>
-						Pays : <input name="pays" /><br/><br/>
+						adresse : <input type="text" name="rue" placeholder=" n° et nom de la rue" ><br/><br/>
+						Batiment, Etage, lieu dit : <input type="text" name="cdp" placeholder=" complement d'adresse" ><br/><br/>
+						Code Postale : <input type="text" name="cdp" placeholder=" ex : 72000" ><br/><br/>
+						Ville : <input type="text" name="ville" placeholder=" ex : Le Mans" ><br/><br/>
+						Pays : <input type="text" name="pays" placeholder=" ex : France" ><br/><br/>
 						Téléphone : <input name="phone" /><br/><br/>
 					</p>	
 					<p class="section_formulaire">
@@ -131,7 +131,7 @@
 			<?php 
 					if(isset($_POST["Envoyer"])) 
 					{
-						if(!empty($_POST["ident"])&&!empty($_POST["passwd"])&&!empty($_POST["conf_passwd"])&&($_POST["passwd"]==$_POST["conf_passwd"])&&!empty($_POST["media"])&&!empty($_POST["nom"])&&!empty($_POST["prenom"])&&!empty($_POST["jour"])&&!empty($_POST["mois"])&&!empty($_POST["an"])&&($_POST["an"]<1998)&&!empty($_POST["rue"])&&!empty($_POST["cdp"])&&!empty($_POST["ville"])&&!empty($_POST["pays"])&&!empty($_POST["phone"]))
+						if(!empty($_POST["ident"])&&!empty($_POST["passwd"])&&!empty($_POST["conf_passwd"])&&($_POST["passwd"]==$_POST["conf_passwd"])&&!empty($_POST["media"])&&!empty($_POST["nom"])&&!empty($_POST["prenom"])&&!empty($_POST["jour"])&&!empty($_POST["mois"])&&!empty($_POST["an"])&&($_POST["an"]<1998)&&!empty($_POST["rue"])&&!empty($_POST["ville"])&&!empty($_POST["pays"])&&!empty($_POST["phone"]))
 						{
 
 						}
@@ -161,7 +161,7 @@
 					{
 
 					}
-
+					/*echo ''.$_POST["ident"].''.$_POST["passwd"].''.$_POST["conf_passwd"].''.$_POST["media"].''.$_POST["nom"].''.$_POST["prenom"].''.$_POST["jour"].''.$_POST["mois"].''.$_POST["an"].''.$_POST["rue"].''.$_POST["ville"].''.$_POST["pays"].''.$_POST["phone"].'';*/
 				?>
 
 	</body>
