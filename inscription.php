@@ -49,7 +49,7 @@
 					<p class="formulaire">
 						Titre : <input type="radio" name="media" value="madamme" checked="checked" /> Madamme
 						<input type="radio" name="media" value="monsieur" /> Monsieur <br/><br/>
-						Nom : <input name="nom" /><br/><br/>
+						Nom : <input name="nom" <?php echo 'value="'.$_POST["nom"].'" />'?>  /><br/><br/>
 						Prénom : <input name="prenom" /><br/><br/>
 						Date de Naissance : 
 						<select name="jour" size="1">
