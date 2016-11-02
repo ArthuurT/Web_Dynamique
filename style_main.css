@@ -33,9 +33,10 @@ p.slogan
 #logo
 {
 	position: absolute;
-	height: 18%;
+	height: 115px;
 	padding-left:10px;
-	top: 20px;
+	top: 50px;
+	left:200px;
 }
 
 nav
