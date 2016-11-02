@@ -1,13 +1,13 @@
 /*                            ==============
                               =page globale=
                               ==============
-*/ 
+*/
 
 html {
 	height: 100%;
 	background-color: #77CCEE;
 }
-body 
+body
 {
 	min-height: 100%;
 	position: relative;
@@ -16,7 +16,7 @@ body
 /*                            ==============
                               =   Header   =
                               ==============
-*/ 
+*/
 
 p.slogan
 {
@@ -34,9 +34,12 @@ p.slogan
 {
 	position: absolute;
 	height: 115px;
+	width: 200px;
 	padding-left:10px;
 	top: 50px;
 	left:200px;
+	background-image: url("Images/logo_blue.svg");
+	background-repeat: no-repeat;
 }
 
 nav
@@ -51,11 +54,11 @@ nav
 	margin-bottom: 3%;
 }
 
-li.menu 
+li.menu
 {
 	display:inline;
 	padding-left: 2%;
-}  
+}
 
 a.lien_menu
 {
@@ -88,7 +91,7 @@ header
 /*                            ==================
                               =coprs de la page=
                               ==================
-*/ 
+*/
 
 section
 {
@@ -105,11 +108,11 @@ section
 	font-family: Arial;
 	margin-bottom: 10px;
 	text-align: center;
-	background-color: #293133;	
+	background-color: #293133;
 }
 
 .fond
-{	
+{
 	font-size: 15px;
 	font-family: georgia;
 }
@@ -144,7 +147,7 @@ td
 /*                            ==============
                               =   Footer   =
                               ==============
-*/ 
+*/
 
 footer
 {
@@ -163,7 +166,7 @@ footer
 li.menu_logo_gauche
 {
 	display:inline;
-	padding-right:1%; 
+	padding-right:1%;
 }
 li.menu_logo_droit
 {
@@ -171,7 +174,7 @@ li.menu_logo_droit
 	padding-left:1%;
 }
 
-li.menu_footer 
+li.menu_footer
 {
 	display:inline;
 	margin-right: 0%;
@@ -185,4 +188,3 @@ a.lien_footer
 	color: #77CCEE;
 	text-decoration: none;
 }
-
