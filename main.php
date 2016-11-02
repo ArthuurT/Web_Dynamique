@@ -16,7 +16,7 @@
 		<header>
 
 			<p class="slogan"> La ludothèque libre pour tous ! </p>
-			<a href="main.php"> <img id="logo" src="Images/logo_blue.svg"/> </a>
+			<a href="main.php"><div id="logo"></div></a>
 			<nav>
 
 				<ul>
@@ -32,7 +32,7 @@
 		</nav>
 
 		</header>
-		
+
 			<section class="intro">
 
 				<p> Bonjour et bienvenue sur le site de la ludothèque par kirozz et WarNN <br/> <br/> <br/><br/>
@@ -40,7 +40,7 @@
 
 			</section>
 
-		
+
 		<section class="fond">
 
 				<table>
@@ -66,7 +66,7 @@
 						<td>
 							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis imperdiet ante. Nulla faucibus elementum pulvinar. Aenean et enim fermentum, tristique nunc nec, scelerisque lorem. Mauris metus urna, mattis quis dignissim a, commodo ultricies nisl. Morbi enim nisi, cursus eu velit sed, venenati tibulum non porta dolor, quis molestie orci. Pellentesque tempus porta velit, id ullamcorper lectus egestas eget. Nullam tempus tristique tempus. Nunc vel fringillmkljeupv,cuuizîg;iô#~ji t,pr;gtja erat. Proin quis vehicula mi. Morbi sed orci condimentum, lacinia lorem at, ultrices orci. Nullam dapibus volutpat neque vel viverra. Aenean augue augue, euismod non ultrices a, ultrices in purus. Curabitur in nibh ac mi rhoncus finibus.</p>
 						</td>
-						
+
 						<td>
 							<p>		Curabitur nec condimentum mauris. Aliquam fermentum et ex at tristique. Sed quis lorem sit amet ipsum ultricies fermentum nec sed est. Vivamus id risus nunc. Phasellus tellus lectus, pellentesque sit amet ex consequat, accumsan aliquet massa. Duis sit amet erat auctor, vestibulum massa non, ornare lacus. Donec dictum orci id accumsan ullamcorper. Nulla in fermentum velit. Sed imperdiet consectetur tempus. Quisque eget mauris sed justo hendrerit commodo vitae vel erat.</p>
 						</td>
