@@ -40,9 +40,12 @@ p.commentaire
 {
 	position: absolute;
 	height: 115px;
+	width: 200px;
 	padding-left:10px;
 	top: 50px;
 	left:200px;
+	background-image: url("Images/logo_blue.svg");
+	background-repeat: no-repeat;
 }
 
 nav
