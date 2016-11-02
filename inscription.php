@@ -40,7 +40,7 @@
 					</p>
 					<p class="formulaire">
 						Adresse mail : <input type="text" name="ident" placeholder=" mail " <?php echo 'value="'.$_POST["ident"].'"'?>><br/><br/>
-						Mot de Passe : <input type="password" name="passwd" <?php echo 'value="'.$_POST["passwd"].'" />'?>/><br/><br/>
+						Mot de Passe : <input type="password" name="passwd" <?php echo 'value="'.$_POST["passwd"].'"'?>/><br/><br/>
 						Confirmer votre Mot de Passe : <input type="password" name="conf_passwd" <?php echo 'value="'.$_POST["conf_passwd"].'"'?>/><br/><br/>
 					</p>
 					<p class="section_formulaire">
