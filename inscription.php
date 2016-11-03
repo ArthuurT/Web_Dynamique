@@ -128,41 +128,44 @@
 
 			</section>
 
-			<?php 
-					if(isset($_POST["Envoyer"])) 
-					{
-						if(!empty($_POST["ident"])&&!empty($_POST["passwd"])&&!empty($_POST["conf_passwd"])&&($_POST["passwd"]==$_POST["conf_passwd"])&&!empty($_POST["media"])&&!empty($_POST["nom"])&&!empty($_POST["prenom"])&&!empty($_POST["jour"])&&!empty($_POST["mois"])&&!empty($_POST["an"])&&($_POST["an"]<1998)&&!empty($_POST["rue"])&&!empty($_POST["ville"])&&!empty($_POST["pays"])&&!empty($_POST["phone"]))
-						{
-							echo "<script type='text/javascript'>document.location.replace('main.php');</script>";
-						}
-						else 
-						{
-							echo '<p class="commentaire">';
-							if(empty($_POST["ident"])||empty($_POST["passwd"])||empty($_POST["conf_passwd"])||empty($_POST["media"])||empty($_POST["nom"])||empty($_POST["prenom"])||empty($_POST["jour"])||empty($_POST["mois"])||empty($_POST["an"])||empty($_POST["rue"])||empty($_POST["cdp"])||empty($_POST["ville"])||empty($_POST["pays"])||empty($_POST["phone"]))
-							{
-								echo 'veuillez compléter touts les champs puis envoyer.';
-								echo '<br/>';
-							}
-							
-							if($_POST["an"]>1998)
-							{
-								echo 'vous devez avoir plus de 18 ans pour créer un compte.';
-								echo '<br/>';
-							}
-							if($_POST["passwd"]!=$_POST["conf_passwd"])
-							{
-								echo 'la confirmation du mot de passe doit est la même que le mot de passe.';
-								echo '<br/>';
-							}
-							echo '</p>';
-						}	
-					}
-					if(isset($_POST["Effacer"]))
-					{
+			<?php
 
+				$an_min = date('Y') - 18;
+
+				if(isset($_POST["Envoyer"])) 
+				{
+					if(!empty($_POST["ident"])&&!empty($_POST["passwd"])&&!empty($_POST["conf_passwd"])&&($_POST["passwd"]==$_POST["conf_passwd"])&&!empty($_POST["media"])&&!empty($_POST["nom"])&&!empty($_POST["prenom"])&&!empty($_POST["jour"])&&!empty($_POST["mois"])&&!empty($_POST["an"])&&($_POST["an"]<=$an_min)&&!empty($_POST["rue"])&&!empty($_POST["ville"])&&!empty($_POST["pays"])&&!empty($_POST["phone"]))
+					{
+						echo "<script type='text/javascript'>document.location.replace('main.php');</script>";
 					}
-					/*echo ''.$_POST["ident"].''.$_POST["passwd"].''.$_POST["conf_passwd"].''.$_POST["media"].''.$_POST["nom"].''.$_POST["prenom"].''.$_POST["jour"].''.$_POST["mois"].''.$_POST["an"].''.$_POST["rue"].''.$_POST["ville"].''.$_POST["pays"].''.$_POST["phone"].'';*/
-				?>
+					else 
+					{
+						echo '<p class="commentaire">';
+						if(empty($_POST["ident"])||empty($_POST["passwd"])||empty($_POST["conf_passwd"])||empty($_POST["media"])||empty($_POST["nom"])||empty($_POST["prenom"])||empty($_POST["jour"])||empty($_POST["mois"])||empty($_POST["an"])||empty($_POST["rue"])||empty($_POST["cdp"])||empty($_POST["ville"])||empty($_POST["pays"])||empty($_POST["phone"]))
+						{
+							echo 'veuillez compléter touts les champs puis envoyer.';					
+							echo '<br/>';
+						}
+							
+						if($_POST["an"]>$an_min)
+						{
+							echo 'vous devez avoir plus de 18 ans pour créer un compte.';
+							echo '<br/>';
+						}
+						if($_POST["passwd"]!=$_POST["conf_passwd"])
+						{
+							echo 'la confirmation du mot de passe doit est la même que le mot de passe.';
+							echo '<br/>';
+						}
+						echo '</p>';
+					}	
+				}
+				if(isset($_POST["Effacer"]))
+				{
+
+				}
+				/*echo ''.$_POST["ident"].''.$_POST["passwd"].''.$_POST["conf_passwd"].''.$_POST["media"].''.$_POST["nom"].''.$_POST["prenom"].''.$_POST["jour"].''.$_POST["mois"].''.$_POST["an"].''.$_POST["rue"].''.$_POST["ville"].''.$_POST["pays"].''.$_POST["phone"].'';*/
+			?>
 
 	</body>
 	<footer>
