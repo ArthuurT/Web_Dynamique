@@ -134,9 +134,21 @@
 
 				if(isset($_POST["Envoyer"])) 
 				{
-					if(!empty($_POST["ident"])&&!empty($_POST["passwd"])&&!empty($_POST["conf_passwd"])&&($_POST["passwd"]==$_POST["conf_passwd"])&&!empty($_POST["media"])&&!empty($_POST["nom"])&&!empty($_POST["prenom"])&&!empty($_POST["jour"])&&!empty($_POST["mois"])&&!empty($_POST["an"])&&($_POST["an"]<=$an_min)&&!empty($_POST["rue"])&&!empty($_POST["ville"])&&!empty($_POST["pays"])&&!empty($_POST["phone"]))
+					if(!empty($_POST["ident"])&&!empty($_POST["passwd"])&&!empty($_POST["conf_passwd"])&&($_POST["passwd"]==$_POST["conf_passwd"])&&!empty($_POST["media"])&&!empty($_POST["nom"])&&!empty($_POST["prenom"])&&!empty($_POST["jour"])&&!empty($_POST["mois"])&&!empty($_POST["an"])&&!empty($_POST["rue"])&&!empty($_POST["ville"])&&!empty($_POST["pays"])&&!empty($_POST["phone"]))
 					{
-						echo "<script type='text/javascript'>document.location.replace('main.php');</script>";
+						if($_POST["an"]<$an_min){
+							echo "<script type='text/javascript'>document.location.replace('main.php');</script>";
+						}
+						if($_POST["an"]=$an_min){
+							if($_POST["mois"]<date('m')){
+								echo "<script type='text/javascript'>document.location.replace('main.php');</script>";
+							}
+							if ($_POST["mois"]=date('m')) {
+								if($_POST["jour"]<=date('d')){
+									echo "<script type='text/javascript'>document.location.replace('main.php');</script>";
+								}
+							}
+						}
 					}
 					else 
 					{
@@ -152,6 +164,21 @@
 							echo 'vous devez avoir plus de 18 ans pour créer un compte.';
 							echo '<br/>';
 						}
+						if($_POST["an"]=$an_min){
+							if($_POST["mois"]>date('m')){
+								echo 'vous devez avoir plus de 18 ans pour créer un compte.';
+								echo '<br/>';
+							}
+						}
+						if($_POST["an"]=$an_min){
+							if ($_POST["mois"]=date('m')) {
+								if($_POST["jour"]>date('d')){
+									echo 'vous devez avoir plus de 18 ans pour créer un compte.';
+									echo '<br/>';
+								}
+							}
+						}
+
 						if($_POST["passwd"]!=$_POST["conf_passwd"])
 						{
 							echo 'la confirmation du mot de passe doit est la même que le mot de passe.';
@@ -171,7 +198,7 @@
 	<footer>
 				<ul>
 					<li class="menu_logo_gauche"> MineTek - 2016  </a></li>
-					<li class="menu_footer"> <a class="lien_footer" href=#> Nous contacter</a></li>
+					<li class="menu_footer"> <a class="lien_footer" href="contact.php"> Nous contacter</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href=#> Adresse</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href=#> Règlement</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href=#> Personnel</a></li>
