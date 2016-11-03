@@ -39,9 +39,9 @@
 						Mes Identifiants
 					</p>
 					<p class="formulaire">
-						Adresse mail : <input type="text" name="ident" placeholder=" mail " <?php echo 'value="'.$_POST["ident"].'"'?>><br/><br/>
-						Mot de Passe : <input type="password" name="passwd" <?php echo 'value="'.$_POST["passwd"].'"'?>/><br/><br/>
-						Confirmer votre Mot de Passe : <input type="password" name="conf_passwd" <?php echo 'value="'.$_POST["conf_passwd"].'"'?>/><br/><br/>
+						Adresse mail : <input type="text" name="ident" placeholder=" mail " <?php if(isset($_POST['ident'])) echo 'value="'.$_POST["ident"].'"'?>><br/><br/>
+						Mot de Passe : <input type="password" name="passwd" <?php  if(isset($_POST['passwd']))echo 'value="'.$_POST["passwd"].'"'?>/><br/><br/>
+						Confirmer votre Mot de Passe : <input type="password" name="conf_passwd" <?php  if(isset($_POST['conf_passwd']))echo 'value="'.$_POST["conf_passwd"].'"'?>/><br/><br/>
 					</p>
 					<p class="section_formulaire">
 						Mes Coordonnées
@@ -49,8 +49,8 @@
 					<p class="formulaire">
 						Titre : <input type="radio" name="media" value="madamme" checked="checked" /> Madame
 						<input type="radio" name="media" value="monsieur" /> Monsieur <br/><br/>
-						Nom : <input name="nom" <?php echo 'value="'.$_POST["nom"].'"'?>  /><br/><br/>
-						Prénom : <input name="prenom" <?php echo 'value="'.$_POST["prenom"].'"'?>/><br/><br/>
+						Nom : <input name="nom" <?php if(isset($_POST['nom'])) echo 'value="'.$_POST["nom"].'"'?>  /><br/><br/>
+						Prénom : <input name="prenom" <?php if(isset($_POST['prenom'])) echo 'value="'.$_POST["prenom"].'"'?>/><br/><br/>
 						Date de Naissance : 
 						<select name="jour" size="1">
 							<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option>
@@ -64,7 +64,7 @@
 
 						<select name="mois" size="1">
 							<option value="01">Janvier</option>
-							<option value="02">Févreier</option>
+							<option value="02" selected="selected">Févreier</option>
 							<option value="03">Mars</option>
 							<option value="04">Avril</option>
 							<option value="05">Mai</option>
@@ -100,12 +100,12 @@
 
 							<option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option>
 						</select><br/><br/>
-						adresse : <input type="text" name="rue" placeholder=" n° et nom de la rue" <?php echo 'value="'.$_POST["rue"].'"'?>><br/><br/>
-						Batiment, Etage, lieu dit : <input type="text" name="comp_adresse" placeholder=" complement d'adresse" <?php echo 'value="'.$_POST["comp_adresse"].'"'?>><br/><br/>
-						Code Postale : <input type="text" name="cdp" placeholder=" ex : 72000" <?php echo 'value="'.$_POST["cdp"].'"'?>><br/><br/>
-						Ville : <input type="text" name="ville" placeholder=" ex : Le Mans" <?php echo 'value="'.$_POST["ville"].'"'?>><br/><br/>
-						Pays : <input type="text" name="pays" placeholder=" ex : France" <?php echo 'value="'.$_POST["pays"].'"'?>><br/><br/>
-						Téléphone : <input name="phone" <?php echo 'value="'.$_POST["phone"].'"'?>/><br/><br/>
+						adresse : <input type="text" name="rue" placeholder=" n° et nom de la rue" <?php if(isset($_POST['rue'])) echo 'value="'.$_POST["rue"].'"'?>><br/><br/>
+						Batiment, Etage, lieu dit : <input type="text" name="comp_adresse" placeholder=" complement d'adresse" <?php if(isset($_POST['comp_adresse']))echo 'value="'.$_POST["comp_adresse"].'"'?>><br/><br/>
+						Code Postale : <input type="text" name="cdp" placeholder=" ex : 72000" <?php if(isset($_POST['cdp'])) echo 'value="'.$_POST["cdp"].'"'?>><br/><br/>
+						Ville : <input type="text" name="ville" placeholder=" ex : Le Mans" <?php if(isset($_POST['ville'])) echo 'value="'.$_POST["ville"].'"'?>><br/><br/>
+						Pays : <input type="text" name="pays" placeholder=" ex : France" <?php if(isset($_POST['pays'])) echo 'value="'.$_POST["pays"].'"'?>><br/><br/>
+						Téléphone : <input name="phone" <?php if(isset($_POST['phone'])) echo 'value="'.$_POST["phone"].'"'?>/><br/><br/>
 					</p>	
 					<p class="section_formulaire">
 						Recevoir les Offres et les Bons Plans
