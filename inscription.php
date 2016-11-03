@@ -23,7 +23,7 @@
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href=#>Contact</a></li>
+					<li class = "menu"><a class="lien_menu" href="contact.php">Contact</a></li>
 
 				</ul>
 
