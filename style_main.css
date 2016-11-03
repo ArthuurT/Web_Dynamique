@@ -163,10 +163,13 @@ td
 	border-radius: 5px;
 	box-shadow: 2px 2px 2px black;
 	border-collapse: collapse;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 100px;
+	padding-right: 100px;
+	text-align: center;
 
 }
+
+
 
 /*                            ==============
                               =   Footer   =

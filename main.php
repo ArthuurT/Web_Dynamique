@@ -65,16 +65,29 @@
 
 					<tr class="zone">
 
-						<td>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis imperdiet ante. Nulla faucibus elementum pulvinar. Aenean et enim fermentum, tristique nunc nec, scelerisque lorem. Mauris metus urna, mattis quis dignissim a, commodo ultricies nisl. Morbi enim nisi, cursus eu velit sed, venenati tibulum non porta dolor, quis molestie orci. Pellentesque tempus porta velit, id ullamcorper lectus egestas eget. Nullam tempus tristique tempus. Nunc vel fringillmkljeupv,cuuizîg;iô#~ji t,pr;gtja erat. Proin quis vehicula mi. Morbi sed orci condimentum, lacinia lorem at, ultrices orci. Nullam dapibus volutpat neque vel viverra. Aenean augue augue, euismod non ultrices a, ultrices in purus. Curabitur in nibh ac mi rhoncus finibus.</p>
+						<td class="contenu">
+							<p> </p>
 						</td>
 
-						<td>
-							<p>		Curabitur nec condimentum mauris. Aliquam fermentum et ex at tristique. Sed quis lorem sit amet ipsum ultricies fermentum nec sed est. Vivamus id risus nunc. Phasellus tellus lectus, pellentesque sit amet ex consequat, accumsan aliquet massa. Duis sit amet erat auctor, vestibulum massa non, ornare lacus. Donec dictum orci id accumsan ullamcorper. Nulla in fermentum velit. Sed imperdiet consectetur tempus. Quisque eget mauris sed justo hendrerit commodo vitae vel erat.</p>
+						<td class="contenu">
+							<p>	</p>
 						</td>
 
-						<td>
-							<p> 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis imperdiet ante. Nulla faucibus elementum pulvinar. Aenean et enim fermentum, tristique nunc nec, scelerisque lorem. Mauris metus urna, mattis quis dignissim a, commodo ultricies nisl. Morbi enim nisi, cursus eu velit sed, venenatis porta lorem. Vestibulum non porta dolor, quis molestie orci. Pellentesque tempus porta velit, id ullamcorper lectus egestas eget. Nullam tempus tristique tempus. Nunc vel fringilla erat. Proin quis vehicula mi. Morbi sed orci condimentum, lacinia lorem at, ultrices orci. Nullam dapibus volutpat neque vel viverra. Aenean augue augue, euismod non ultrices a, ultrices in purus. Curabitur in nibh ac mi rhoncus finibus.</p>
+						<td class="contenu">
+							<p>
+							<?php
+							require 'config.php';
+							$Requete = "SELECT * FROM `FC_grp3_Jeux`;";
+							$Reponse = mysql_query($Requete);
+							
+							while ($donnees = mysql_fetch_array($Reponse))
+							{
+							echo $donnees['Nom']." ";
+							echo "<br/>";
+
+							}
+							?>
+							</p>
 						</td>
 
 					</tr>
