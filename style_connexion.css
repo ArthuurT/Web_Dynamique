@@ -48,6 +48,30 @@ p.commentaire
 	background-repeat: no-repeat;
 }
 
+#connec
+{
+	position: absolute;
+	height: 40px;
+	width: 150px;
+	padding-left:10px;
+	top: 10px;
+	right: 20px;
+	background-image: url("Images/user.svg");
+	background-repeat: no-repeat;
+}
+
+#panier
+{
+	position: absolute;
+	height: 40px;
+	width: 150px;
+	padding-left:10px;
+	top: 160px;
+	right: 20px;
+	background-image: url("Images/basket.svg");
+	background-repeat: no-repeat;
+}
+
 nav
 {
 	vertical-align: center;
