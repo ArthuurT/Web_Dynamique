@@ -27,7 +27,7 @@
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href="#">Recherche</a></li>
+					<li class = "menu"><a class="lien_menu" href="recherche.php">Recherche</a></li>
 
 				</ul>
 
@@ -76,14 +76,15 @@
 						<td class="contenu">
 							<p>
 							<?php
-							require 'config.php';
-							$Requete = "SELECT * FROM `FC_grp3_Jeux`;";
-							$Reponse = mysql_query($Requete);
+
+								require 'config.php';
+								$Requete = "SELECT * FROM `FC_grp3_Jeux`;";
+								$Reponse = mysql_query($Requete);
 							
-							while ($donnees = mysql_fetch_array($Reponse))
-							{
-							echo $donnees['Nom']." ";
-							echo "<br/>";
+								while ($donnees = mysql_fetch_array($Reponse))
+								{
+								echo $donnees['Nom']." ";
+								echo "<br/>";
 
 							}
 							?>
@@ -101,7 +102,7 @@
 					<li class="menu_logo_gauche">MineTek - 2016</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href="contact.php">Nous contacter</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href=#>Adresse</a></li>
-					<li class="menu_footer"> <a class="lien_footer" href=#>Règlement</a></li>
+					<li class="menu_footer"> <a class="lien_footer" href="reglement.php">Règlement</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href=#>Personnel</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href=#>Actualité</a></li>
 					<li class="menu_logo_droit">Tous droits reservés</li>

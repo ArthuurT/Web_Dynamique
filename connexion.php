@@ -15,7 +15,7 @@
 
 			<p class="slogan"> La ludothèque libre pour tous ! </p>
 			<a href="main.php"><div id="logo"></div></a>
-			<a href="#"><div id="connec"></div></a>
+			<a href="connexion.php"><div id="connec"></div></a>
 			<a href="panier.php"><div id="panier"></div></a>
 			<nav>
 
@@ -25,7 +25,7 @@
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href="#">Recherche</a></li>
+					<li class = "menu"><a class="lien_menu" href="recherche.php">Recherche</a></li>
 
 				</ul>
 
