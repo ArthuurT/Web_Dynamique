@@ -25,7 +25,7 @@
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href="contact.php">Contact</a></li>
+					<li class = "menu"><a class="lien_menu" href="#">Recherche</a></li>
 
 				</ul>
 
@@ -38,7 +38,7 @@
 				<form class="login" method="post">
 					<h1 class ="connec"> CONNEXION </h1><br/><br/>
 					 Indentifiant:  <input name="ident" class="envoyer"/><br/><br/>
-					 Mot de Passe: 	<input type="password" name="passwd" class="envoyer" /><br/><br/><br/>
+					 Mot de Passe: 	<input type="password" name="passwd" class="mdp" /><br/><br/><br/>
 					<input type="submit" value="Se connecter" name="Envoyer" class="envoyer" /></h1><br/></br>
 
 					<?php 

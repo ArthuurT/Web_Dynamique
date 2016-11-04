@@ -6,6 +6,7 @@
 html {
 	height: 100%;
 	background-color: #77CCEE;
+	width:1300px;
 }
 body 
 {
@@ -171,14 +172,10 @@ section
 	font-style: italic;
 	text-align: center;
 }
-h1
+.contact
 {
-	text-align: center;
-	font-family: New York;
+	font-size: 30px;
 	color: #77CCEE;
-	font-weight: bold;
-	font-style: italic;
-	font-size: 26px;
 }
 
 p.choix

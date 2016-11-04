@@ -25,7 +25,7 @@
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href="contact.php">Contact</a></li>
+					<li class = "menu"><a class="lien_menu" href="#">Recherche</a></li>
 
 				</ul>
 
@@ -36,7 +36,7 @@
 			<section class="intro">
 
 					<p>
-						<h1> Contact</h1>  <br/><br/>
+						<h1 class="contact"> CONTACT</h1>  <br/><br/>
 						Votre adresse mail : <input name="ident"/><br/><br/>
 						<textarea name="comm" rows="10" cols="40">
 							
