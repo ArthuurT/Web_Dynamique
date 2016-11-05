@@ -23,9 +23,9 @@
 
 					<li class = "menu"><a class="lien_menu" href="main.php">Acceuil</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
+					<li class = "menu"><a class="lien_menu" href="catalogue.php">Catalogue</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href="#">Recherche</a></li>
+					<li class = "menu"><a class="lien_menu" href="recherche.php">Recherche</a></li>
 
 				</ul>
 
@@ -76,7 +76,7 @@
 	<footer>
 				<ul>
 					<li class="menu_logo_gauche"> MineTek - 2016  </a></li>
-					<li class="menu_footer"> <a class="lien_footer" href=#> Nous contacter</a></li>
+					<li class="menu_footer"> <a class="lien_footer" href="contact.php"> Nous contacter</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href=#> Adresse</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href="reglement.php"> Règlement</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href=#> Personnel</a></li>
