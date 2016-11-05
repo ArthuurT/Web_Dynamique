@@ -1,3 +1,10 @@
+<?php
+	if(isset($_POST["Envoyer"])){
+		session_start();
+	}
+?>
+
+<!DOCTYPE html>
 <html>
 
 	<head>
@@ -23,7 +30,7 @@
 
 					<li class = "menu"><a class="lien_menu" href="main.php">Acceuil</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href="catalogue.php">Catalogue</a></li>
+					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href="recherche.php">Recherche</a></li>
 
@@ -41,12 +48,25 @@
 					 Mot de Passe: 	<input type="password" name="passwd" class="mdp" /><br/><br/><br/>
 					<input type="submit" value="Se connecter" name="Envoyer" class="envoyer" /></h1><br/></br>
 
-					<?php 
+					<?php
+					require 'config.php';
 					if(isset($_POST["Envoyer"])) 
 					{
 						if(!empty($_POST["ident"])&&!empty($_POST["passwd"]))
 						{
+							$Requete = mysql_query('SELECT * FROM FC_grp3_Clients WHERE adresse_mail LIKE "'. $_POST["ident"].'" AND motdepasse LIKE "'.$_POST["passwd"].'" ');
+							if(mysql_num_rows($Requete) == 0)
+							{
+								echo "<p class='commentaire'>vous n'avez pas de compte veuiller en créer un</p><br/>";
+								session_destroy();
 
+							}else{
+								$donnees = mysql_fetch_array($Requete);
+								$_SESSION['prenom']	= $donnees['prenom']." ";
+								$_SESSION['nom'] = $donnees['nom']." ";
+
+								echo "<script type='text/javascript'>document.location.replace('main.php');</script>";
+							}
 						}
 						else 
 						{
