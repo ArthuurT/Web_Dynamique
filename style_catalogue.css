@@ -19,16 +19,29 @@ body
                               ==============
 */
 
-p.slogan
+div.entete
 {
+	width:100%;
+	padding-top: 2%;
 	color: white;
-	font-size: 15px;
-	font-family: Arial;
-	font-style: italic;
-	margin-top: 0%;
-	padding-right: 20%;
-	padding-top: 2%
+}
+div.slogan
+{
+	position:relative;
+	float: left;
+    width:50%;
+    text-align: right;
+    right: 15%;
 
+}
+
+div.conecter
+{
+	position: relative;
+	float: right;
+    width:50%;
+    text-align: left;
+    left: 27%;
 }
 
 #logo

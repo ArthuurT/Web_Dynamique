@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+<!DOCTYPE html>
 <html>
 
 	<head>
@@ -13,7 +17,15 @@
 
 		<header>
 
-			<p class="slogan"> La ludothèque libre pour tous ! </p>
+		<div class="entete">
+			<div class="slogan">
+				La ludothèque libre pour tous !
+			</div>
+			<div class="conecter">
+				<?php if(isset($_SESSION['prenom'])){ echo 'Bonjour '.$_SESSION['nom'].' '.$_SESSION['prenom'].'';}?>
+			</div>
+		</div>
+
 			<a href="main.php"><div id="logo"></div></a>
 			<a href="connexion.php"><div id="connec"></div></a>
 			<a href="panier.php"><div id="panier"></div></a>
