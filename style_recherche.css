@@ -156,8 +156,8 @@ section
 	margin-bottom: 10px;
 	background-color: #293133;
 	padding-left: 20px;
-	padding-bottom: 5%;
 	font-style: italic;
+	padding-bottom: 2%;
 }
 
 .login
@@ -171,37 +171,53 @@ h1.recherche
 	color:#77CCEE;
 }
 
-div.option_rech
-{
-	width:100%;
-}
 
 div.gauche
 {
 	position:relative;
-	float: left;
     width:50%;
     text-align: right;
-    right: 15%;
+    margin-left: 10%;
 
 }
 
-div.droit
+
+.img_cata
 {
-	position: relative;
-	float: right;
-    width:50%;
-    text-align: left;
-    left: 15%;
-    
+	height: 200px;
+	margin-left: 15%;
 }
 
-.envoyer
+h2
 {
-	position: relative;
-	left: 45%;
-	font-size: 20px;
+	text-align: center;
+	color:#77CCEE;
+	font-family: ComicSansMS;
 }
+
+.carac
+{
+	position: absolute;
+	margin-left: 50%;
+	margin-top: 11%;
+	font-family: ComicSansMS;
+
+}
+
+.descr
+{
+	font-family: ComicSansMS;
+	margin-left:5%;
+	margin-right:5%;
+}
+
+.souligne
+{
+	text-decoration: underline;
+	color:#77CCEE; 
+}
+
+
 
 
 /*                            ==============

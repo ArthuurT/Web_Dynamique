@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -43,39 +44,53 @@
 								require 'config.php';
 								$Requete = "SELECT * FROM `FC_grp3_Jeux`;";
 								$Reponse = mysql_query($Requete);
+								$i = 0;
 							
 								while ($donnees = mysql_fetch_array($Reponse))
 								{
 								echo '<h2>'.$donnees[0].'</h2>';
 								echo '<div class="carac">';
-								echo '<span class="souligne">Age minimum requis:</span> '.$donnees[1].' ans';
+								echo '<span class="souligne">Age minimum requis:</span> '.$donnees[2].' ans';
 								echo '<br/><br/>';
-								echo '<span class="souligne"> Type de jeux:</span> '.$donnees[2].'';
+								echo '<span class="souligne"> Type de jeux:</span> '.$donnees[3].'';
 								echo '<br/><br/>';
-								echo '<span class="souligne"> Nombre de joueurs (min-max):</span> '.$donnees[3].'-'.$donnees[4].'';
+								echo '<span class="souligne"> Nombre de joueurs (min-max):</span> '.$donnees[4].'-'.$donnees[5].'';
 								echo '<br/><br/>';
 								echo'<form class="reserv" method="post">';
-								echo'<input type="submit" value="Reserver" name="Reservation"/>';
+								echo'<input type="submit" value="Reserver" name="Reservation'.$i.'"/>';
+								$i = $i+1;
 								echo'</form>';
 								echo '</div>';
 								echo '<div class= "descr"> <span class="souligne"> Description:</span> ';
-								if($donnees[0] == 'Monopoly'){
-									echo "Le Monopoly est un jeu de société américain édité par Hasbro. Le but du jeu consiste à ruiner ses concurrents par des opérations immobilières. Il symbolise les aspects apparents et spectaculaires du capitalisme, les fortunes se faisant et se défaisant au fil des coups de dés. Ce jeu de société est mondialement connu, et il en existe de multiples versions.";
-								}else if($donnees[0] == 'Trivial Pursuit'){
-									echo"Trivial Pursuit (connu au Québec sous le nom de « Quelques arpents de pièges », mais désormais commercialisé sous son nom anglophone Trivial Pursuit) est un jeu de société dont la progression dépend de la capacité du joueur à répondre à des questions de culture générale, éventuellement dans un domaine plus précis pour des versions plus ciblées du jeu.";
-								}else if($donnees[0] == 'Trampoline'){
-									echo"Toile tendue sur des ressorts d'acier, sur laquelle on effectue des figures en sautant et en rebondissant, sport ainsi pratiqué.";
-								}
+								echo $donnees[1];
 
 								echo'</div>';
 								echo'<br/>';
 								echo'<br/>';
-								echo '<p><img class="img_cata" src="'.$donnees[5].'"/></p>';
+								echo '<p><img class="img_cata" src="'.$donnees[6].'"/></p>';
 								echo '<br/>';
 
 								echo '<hr/>';
-								
+									
 								}
+
+
+								$j = $i;
+								$i = 0;
+								while($i < $j){
+									if(isset($_POST["Reservation".$i.""])) 
+									{
+										$Requete = "SELECT `Nom` FROM `FC_grp3_Jeux` WHERE `indice`='".$i."';";
+										$Reponse = mysql_query($Requete);
+										while ($donnees = mysql_fetch_array($Reponse))
+										{	
+											$_SESSION["Nom"]= $donnees[0];
+
+										}
+									}
+									$i = $i + 1;
+								}
+
 					?>
 			</section>
 	
@@ -92,4 +107,5 @@
 					<li class="menu_logo_droit">Tous droits reservés</li>
 				</ul>
 	</footer>
-</html>.
+</html>
+

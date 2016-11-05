@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
 <html>
 
 	<head>
@@ -23,7 +25,7 @@
 
 					<li class = "menu"><a class="lien_menu" href="main.php">Acceuil</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
+					<li class = "menu"><a class="lien_menu" href="catalogue.php">Catalogue</a></li>
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href="recherche.php">Recherche</a></li>
 
@@ -38,17 +40,15 @@
 				<form class="login" method="post">
 					<h1 class ="recherche"> RECHERCHE </h1><br/><br/>
 
-					<div class="option_rech">
-
 						<div class="gauche">
 							Type de jeux:				<select name="type_jeu" size="1">
 					 										<option value="Société" selected="selected">jeux de société</option>
-					 										<option value="exterieur">jeux d'exterieur</option>
+					 										<option value="Exterieur">jeux d'exterieur</option>
 					 										<option value="Réflexion">jeux de réflexion</option>
 					 										<option value="04">jeux de ?</option>
 														</select><br/><br/>
 
-							Nombre de joueur minimum:	<select name="-nb_joueur" size="1">
+							Nombre de joueur minimum:	<select name="nb_joueurmin" size="1">
 					 										<option value="01" selected="selected"> 1 </option>
 					 										<option value="2"> 2 </option>
 					 										<option value="3"> 3 </option>
@@ -56,7 +56,7 @@
 					 										<option value="5"> 5 </option>
 														</select><br/><br/>
 
-							Nombre de joueur maximum:	<select name="+nb_joueur" size="1">
+							Nombre de joueur maximum:	<select name="nb_joueurmax" size="1">
 					 										<option value="1"> 1 </option>
 					 										<option value="2"> 2 </option>
 					 										<option value="3"> 3 </option>
@@ -64,7 +64,7 @@
 					 										<option value="5" selected="selected"> 5 </option>
 														</select><br/><br/>
 
-							Age minimum:	<select name="age" size="1">
+							Age du joueur:	<select name="age" size="1">
 					 										<option value="03" selected="selected"> 3 </option>
 					 										<option value="5"> 5 </option>
 					 										<option value="7"> 7 </option>
@@ -73,45 +73,55 @@
 					 										<option value="16"> 16 </option>
 					 										<option value="18"> 18 </option>
 														</select><br/><br/>
+											<input type="submit" value="rechercher" name="Rechercher" class="envoyer" /></h1>
 						</div>
-
-						<div class="droit">
-							<input type="radio" name="trier" value="1" checked="checked"/>: Titre = A->Z  <br/><br/>
-							<input type="radio" name="trier" value="2"/>: Nouveauté <br/><br/>
-							<input type="radio" name="trier" value="3"/>: Note des utilisateurs <br/><br/>
-							<input type="radio" name="trier" value="4"/>: Par disponibilité <br/><br/>
-						</div>
-						<br/><br/><br/><br/><br/><br/><br/>
-						<div>
-							<input type="submit" value="rechercher" name="Recherhcer" class="envoyer" /></h1>
-						</div>
-					</div>
 
 					<?php 
-					if(isset($_POST["Recherhcer"])) 
+					require 'config.php';
+					if(isset($_POST["Rechercher"])) 
 					{
-				
-						require 'config.php';
-
 						$type = $_POST["type_jeu"];
-						$nb_inf = $_POST["-nb_joueur"];
-						$nb_sup = $_POST["+nb_joueur"];
+						$nb_inf = $_POST["nb_joueurmin"];
+						$nb_sup = $_POST["nb_joueurmax"];
 						$age = $_POST["age"];
-						$trier = $_POST["trier"];
-						echo ' '.$type.' '.$nb_inf.' '.$nb_sup.' '.$age.' '.$trier.'';
-						echo '<br/><br/><br/><br/>';
 
-						//$Requete = "SELECT * FROM FC_grp3_Jeux WHERE" "TypeJeux = '" . $type . "'" " AND " "nombre de joueur min = '" . $nb_inf . "'" " AND " "nombre de joueur max = '" . $nb_sup . "'" " AND " "age = '" . $age . "'";
+						$Requete = "SELECT * FROM `FC_grp3_Jeux` WHERE `TypeJeux`='".$type."' AND `nombre_joueur_min`>=".$nb_inf." AND `nombre_joueur_max`<=".$nb_sup." AND `Ages`<=".$age.";";
 
-						//$Reponse = mysql_query($Requete);
+						$Reponse = mysql_query($Requete);
+
+						echo"<br/>";
+						echo"<br/>";
 						
-						//while ($donnees = mysql_fetch_array($Reponse))
-						//{
-						//echo $donnees['Nom']." ";
-						//echo "<br/>";
-						//}
+						while ($donnees = mysql_fetch_array($Reponse))
+						{
+								echo '<hr/>';
+								echo '<h2>'.$donnees[0].'</h2>';
+								echo '<div class="carac">';
+								echo '<span class="souligne">Age minimum requis:</span> '.$donnees[2].' ans';
+								echo '<br/><br/>';
+								echo '<span class="souligne"> Type de jeux:</span> '.$donnees[3].'';
+								echo '<br/><br/>';
+								echo '<span class="souligne"> Nombre de joueurs (min-max):</span> '.$donnees[4].'-'.$donnees[5].'';
+								echo '<br/><br/>';
+								echo'<form class="reserv" method="post">';
+								echo'</form>';
+								echo '</div>';
+								echo '<div class= "descr"> <span class="souligne"> Description:</span> ';
+								echo $donnees[1];
+								echo'</div>';
+								echo'<br/>';
+								echo'<br/>';
+								echo '<p><img class="img_cata" src="'.$donnees[6].'"/></p>';
+								echo '<br/>';
+								echo '<br/>';
+								echo '<br/>';
+								echo '<br/>';
+								echo '<hr/>';
+								
+						
+								}
 
-					}
+						}
 					?>
 			</section>
 	</body>
@@ -131,3 +141,4 @@
 				</ul>
 	</footer>
 </html>
+<?php session_destroy(); ?>
