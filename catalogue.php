@@ -27,7 +27,7 @@
 		</div>
 		
 			<a href="main.php"><div id="logo"></div></a>
-			<a href="connexion.php"><div id="connec"></div></a>
+			<a <?php if(isset($_SESSION['prenom'])){ echo 'href="mon_compte.php"';}else{echo 'href="connexion.php"';}?> ><div id="connec"></div></a>
 			<a href="panier.php"><div id="panier"></div></a>
 			<nav>
 

@@ -8,7 +8,7 @@
 
 		<meta charset="UTF-8"/>
 		<title>MineTek</title>
-		<link rel="stylesheet" href="style_contact.css" media="all" />
+		<link rel="stylesheet" href="style_mon_compte.css" media="all" />
 		<link rel="shortcut icon" href="Images/logo_blue_onglet.ico">
 
 	</head>
@@ -37,7 +37,7 @@
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href="catalogue.php">Catalogue</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href="#">Recherche</a></li>
+					<li class = "menu"><a class="lien_menu" href="recherche.php">Recherche</a></li>
 
 				</ul>
 
@@ -47,23 +47,25 @@
 		
 			<section class="intro">
 
-					<p>
-						<h1 class="contact"> CONTACT</h1>  <br/><br/>
-						Votre adresse mail : <input name="ident"/><br/><br/>
-						<textarea name="comm" rows="10" cols="40">
-							
-						</textarea> <br/><br/>
-					</p>
-					<p class="choix">
-						<input type="radio" name="type" value="resa_cour"> Problème avec une réservation en cours<br/>
-						<input type="radio" name="type" value="resa_encienne"> Problème avec une ancienne réservation<br/>
-						<input type="radio" name="type" value="probleme_date"> Problème avec la date de livraison ou de retour<br/>
-						<input type="radio" name="type" value="autre"> Autres <br/><br/>
-					</p>
-					<input type="submit" value="Envoyer" name="envoyer" class="envoyer" /></h1><br/></br>
+				<p>
+						<h1 class="contact"> MON COMPTE </h1>  <br/><br/>
+				</p>
 
-					
-					
+				<form method="post">
+
+					<input type="submit" value="Déconexion" name="deconexion" class="envoyer" />
+
+					<?php
+
+						require 'config.php';
+						if(isset($_POST["deconexion"])){
+
+							session_destroy();
+
+							echo "<script type='text/javascript'>document.location.replace('main.php');</script>";
+						}
+
+					?>
 				</form>
 			</section>
 	</body>
@@ -74,7 +76,7 @@
 	<footer>
 				<ul>
 					<li class="menu_logo_gauche"> MineTek - 2016  </a></li>
-					<li class="menu_footer"> <a class="lien_footer" href=#> Nous contacter</a></li>
+					<li class="menu_footer"> <a class="lien_footer" href="contact.php"> Nous contacter</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href=#> Adresse</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href="reglement.php"> Règlement</a></li>
 					<li class="menu_footer"> <a class="lien_footer" href=#> Personnel</a></li>
