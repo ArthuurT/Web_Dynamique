@@ -51,12 +51,15 @@
 				
 					<?php
 								require 'config.php';
-								$Requete = "SELECT * FROM `FC_grp3_Jeux`;";
+								$Requete = "SELECT * FROM `FC_grp3_Jeux` ORDER BY `Indice`;";
 								$Reponse = mysql_query($Requete);
 								$i = 0;
 							
 								while ($donnees = mysql_fetch_array($Reponse))
 								{
+								if($i > 0){
+									echo '<hr/>';
+								}
 								echo '<h2>'.$donnees[0].'</h2>';
 								echo '<div class="carac">';
 								echo '<span class="souligne">Age minimum requis:</span> '.$donnees[2].' ans';
@@ -79,7 +82,7 @@
 								echo '<p><img class="img_cata" src="'.$donnees[6].'"/></p>';
 								echo '<br/>';
 
-								echo '<hr/>';
+								
 									
 								}
 

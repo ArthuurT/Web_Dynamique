@@ -52,36 +52,38 @@
 
 						<div class="gauche">
 							Type de jeux:				<select name="type_jeu" size="1">
-					 										<option value="Société" selected="selected">jeux de société</option>
-					 										<option value="Exterieur">jeux d'exterieur</option>
-					 										<option value="Réflexion">jeux de réflexion</option>
-					 										<option value="04">jeux de ?</option>
+					 										<option value="Société" selected="selected">Jeux de société</option>
+					 										<option value="Exterieur">Jeux d'extérieur</option>
+					 										<option value="Réflexion">Jeux de réflexion</option>
 														</select><br/><br/>
 
 							Nombre de joueur minimum:	<select name="nb_joueurmin" size="1">
-					 										<option value="01" selected="selected"> 1 </option>
-					 										<option value="2"> 2 </option>
-					 										<option value="3"> 3 </option>
-					 										<option value="4"> 4 </option>
-					 										<option value="5"> 5 </option>
+					 										<?php $a= 1;
+																while($a <= 16){
+					 												echo '<option value="'.$a.'"> '.$a.' </option>;';
+					 												$a = $a + 1;
+					 											}
+					 										?>
 														</select><br/><br/>
 
 							Nombre de joueur maximum:	<select name="nb_joueurmax" size="1">
-					 										<option value="1"> 1 </option>
-					 										<option value="2"> 2 </option>
-					 										<option value="3"> 3 </option>
-					 										<option value="4"> 4 </option>
-					 										<option value="5" selected="selected"> 5 </option>
+															<?php $a= 1;
+																while($a < 16){
+					 												echo '<option value="'.$a.'"> '.$a.' </option>;';
+					 												$a = $a + 1;
+					 											}
+					 											echo '<option value="16" selected="selected"> 16 </option>;';
+					 										?>
 														</select><br/><br/>
 
 							Age du joueur:	<select name="age" size="1">
-					 										<option value="03" selected="selected"> 3 </option>
-					 										<option value="5"> 5 </option>
-					 										<option value="7"> 7 </option>
-					 										<option value="9"> 9 </option>
-					 										<option value="12"> 12 </option>
-					 										<option value="16"> 16 </option>
-					 										<option value="18"> 18 </option>
+					 										<?php $a= 1;
+																while($a < 18){
+					 												echo '<option value="'.$a.'"> '.$a.' </option>;';
+					 												$a = $a + 1;
+					 											}
+					 											echo '<option value="18" selected="selected"> 18 ou + </option>;';
+					 										?>
 														</select><br/><br/>
 											<input type="submit" value="rechercher" name="Rechercher" class="envoyer" /></h1>
 						</div>
@@ -101,6 +103,7 @@
 
 						echo"<br/>";
 						echo"<br/>";
+						
 						
 						while ($donnees = mysql_fetch_array($Reponse))
 						{
@@ -126,7 +129,7 @@
 								echo '<br/>';
 								echo '<br/>';
 								echo '<br/>';
-								echo '<hr/>';
+								
 								
 						
 								}

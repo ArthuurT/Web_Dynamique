@@ -139,13 +139,12 @@ section
 
 .intro
 {
-	border-radius: 5px;
 	color:white;
 	font-size: 15px;
-	border: 1px solid black;
 	font-family: Arial;
 	margin-bottom: 10px;
 	background-color: #293133;
+	padding-top: 1%;
 }
 
 .fond
@@ -197,6 +196,7 @@ input[type="submit"]{
 
 
 
+
 /*                            ==============
                               =   Footer   =
                               ==============
@@ -207,7 +207,6 @@ footer
 	border-radius: 5px;
 	position: absolute;
 	width: 80%;
-	height: 8%;
 	display: table-row;
 	text-align: center;
 	margin-top: 2%;
