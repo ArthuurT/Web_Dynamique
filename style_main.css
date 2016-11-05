@@ -31,7 +31,7 @@ div.slogan
 	float: left;
     width:50%;
     text-align: right;
-    right: 15%;
+    right: 10%;
 
 }
 
@@ -74,7 +74,7 @@ div.conecter
 	height: 40px;
 	width: 150px;
 	padding-left:10px;
-	top: 160px;
+	top: 155px;
 	right: 20px;
 	background-image: url("Images/basket.svg");
 	background-repeat: no-repeat;
@@ -178,7 +178,7 @@ td
 	box-shadow: 2px 2px 2px black;
 	border-collapse: collapse;
 	padding-left: 100px;
-	padding-right: 100px;
+	padding-right: 110px;
 	text-align: center;
 
 }

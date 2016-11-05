@@ -31,7 +31,7 @@ div.slogan
 	float: left;
     width:50%;
     text-align: right;
-    right: 15%;
+    right: 10%;
 
 }
 
@@ -80,7 +80,7 @@ p.commentaire
 	height: 40px;
 	width: 150px;
 	padding-left:10px;
-	top: 160px;
+	top: 155px;
 	right: 20px;
 	background-image: url("Images/basket.svg");
 	background-repeat: no-repeat;

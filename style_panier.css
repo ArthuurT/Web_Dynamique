@@ -19,16 +19,29 @@ body
                               ==============
 */
 
-p.slogan
+div.entete
 {
+	width:100%;
+	padding-top: 2%;
 	color: white;
-	font-size: 15px;
-	font-family: Arial;
-	font-style: italic;
-	margin-top: 0%;
-	padding-right: 20%;
-	padding-top: 2%
+}
+div.slogan
+{
+	position:relative;
+	float: left;
+    width:50%;
+    text-align: right;
+    right: 10%;
 
+}
+
+div.conecter
+{
+	position: relative;
+	float: right;
+    width:50%;
+    text-align: left;
+    left: 27%;
 }
 
 #logo
@@ -61,7 +74,7 @@ p.slogan
 	height: 40px;
 	width: 150px;
 	padding-left:10px;
-	top: 160px;
+	top: 155px;
 	right: 20px;
 	background-image: url("Images/basket.svg");
 	background-repeat: no-repeat;

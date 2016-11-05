@@ -30,7 +30,7 @@
 
 					<li class = "menu"><a class="lien_menu" href="main.php">Acceuil</a></li>
 					<div class="separateur"> | </div>
-					<li class = "menu"><a class="lien_menu" href=#>Produits</a></li>
+					<li class = "menu"><a class="lien_menu" href="catalogue.php">Catalogue</a></li>
 					<div class="separateur"> | </div>
 					<li class = "menu"><a class="lien_menu" href="recherche.php">Recherche</a></li>
 

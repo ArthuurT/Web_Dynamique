@@ -1,10 +1,5 @@
-<<<<<<< HEAD
+
 <?php session_start(); ?>
-=======
-<?php
-	session_start();
-?>
->>>>>>> 100516672de24d14b213d8f3b681b78ca7c5d7d1
 <!DOCTYPE html>
 <html>
 

@@ -145,7 +145,7 @@
 							$requete = mysql_query("INSERT INTO FC_grp3_Clients (adresse_mail,motdepasse,prenom,nom)
                                          VALUES ('".$_POST["ident"]."','".$_POST["passwd"]."','".$_POST["prenom"]."','".$_POST["nom"]."')");
 
-							echo "<script type='text/javascript'>document.location.replace('connection.php');</script>";
+							echo "<script type='text/javascript'>document.location.replace('connexion.php');</script>";
 						}
 					}
 					else 
