@@ -141,7 +141,7 @@
 
 					<div class="deconexion">
 						<p>
-							bonjour,<br/><br/>si vous voulez vous déconecter il vous siffut de mettre la main<br/> sur souris oui je que vous avez deja sous la main ou si vous <br/> êtes sur unordinateur portable utiliser le trackpad qui se situe <br/>sous vaux doights.<br/><br/>Ensuite diriger la sourie sur le bouton deconexion qui se situe <br/>juste sous se texte allez-si.<br/><br/>Ensuite vous avez presque fini vous pouvez maintenant<br/> appuier dessus et vous serrez directement rediriger vers la <br/>page principale tout en étant déconecter !
+							Bonjour,<br/><br/>Si vous voulez vous déconnecter il vous suffit de mettre la main<br/> sur la souris, oui je sais que vous l'avez déjà sous la main. Si vous <br/> êtes sur un ordinateur portable utiliser le trackpad qui se situe <br/>sous vos doigts.<br/><br/>Ensuite diriger la souris sur le bouton déconnexion qui se situe <br/>juste sous se texte. Allez-y !<br/><br/>C'est presque fini vous pouvez maintenant<br/> appuyer dessus et vous serez directement rediriger vers la <br/>page principale tout en étant déconnecter !
 						</p>
 						<p class="deco">
 						<input type="submit" value="Déconexion" name="deconexion"/>
