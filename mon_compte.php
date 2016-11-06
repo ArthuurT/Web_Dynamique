@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require 'config.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -150,7 +151,7 @@
 				</div>
 					<?php
 
-						require 'config.php';
+						
 						if(isset($_POST["deconexion"])){
 
 							session_destroy();

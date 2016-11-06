@@ -62,8 +62,17 @@
 
 							}else{
 								$donnees = mysql_fetch_array($Requete);
-								$_SESSION['prenom']	= $donnees['prenom']." ";
-								$_SESSION['nom'] = $donnees['nom']." ";
+								$_SESSION['adresse_mail']	= $donnees['adresse_mail']."";
+								$_SESSION['motdepasse']	= $donnees['motdepasse']."";
+								$_SESSION['prenom']	= $donnees['prenom']."";
+								$_SESSION['nom'] = $donnees['nom']."";
+								$_SESSION['date_de_naissance']	= $donnees['date_de_naissance']."";
+								$_SESSION['adresse_rue']	= $donnees['adresse_rue']."";
+								$_SESSION['adresse_cp']	= $donnees['adresse_cp']."";
+								$_SESSION['adresse_ville']	= $donnees['adresse_ville']."";
+								$_SESSION['adresse_pays']	= $donnees['adresse_pays']."";
+								$_SESSION['phone']	= $donnees['phone']."";
+								$_SESSION['id'] = $donnees['id']."";
 
 								echo "<script type='text/javascript'>document.location.replace('main.php');</script>";
 							}

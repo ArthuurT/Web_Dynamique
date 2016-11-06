@@ -142,8 +142,8 @@
 
 
 							$id = NULL;
-							$requete = mysql_query("INSERT INTO FC_grp3_Clients (adresse_mail,motdepasse,prenom,nom)
-                                         VALUES ('".$_POST["ident"]."','".$_POST["passwd"]."','".$_POST["prenom"]."','".$_POST["nom"]."')");
+							$requete = mysql_query("INSERT INTO FC_grp3_Clients (adresse_mail,motdepasse,prenom,nom,date_de_naissance,adresse_rue,adresse_cp,adresse_ville,adresse_pays,phone)
+                                         VALUES ('".$_POST["ident"]."','".$_POST["passwd"]."','".$_POST["prenom"]."','".$_POST["nom"]."','".$_POST["jour"]."/".$_POST["mois"]."/".$_POST["an"]."','".$_POST["rue"]."','".$_POST["cdp"]."','".$_POST["ville"]."','".$_POST["pays"]."','".$_POST["phone"]."')");
 
 							echo "<script type='text/javascript'>document.location.replace('connexion.php');</script>";
 						}
