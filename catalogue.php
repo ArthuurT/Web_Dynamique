@@ -60,6 +60,7 @@
 								if($i > 0){
 									echo '<hr/>';
 								}
+								$i = $i+1;
 								echo '<h2>'.$donnees[0].'</h2>';
 								echo '<div class="carac">';
 								echo '<span class="souligne">Age minimum requis:</span> '.$donnees[2].' ans';
@@ -68,10 +69,12 @@
 								echo '<br/><br/>';
 								echo '<span class="souligne"> Nombre de joueurs (min-max):</span> '.$donnees[4].'-'.$donnees[5].'';
 								echo '<br/><br/>';
-								echo'<form class="reserv" method="post">';
-								echo'<input type="submit" value="Reserver" name="Reservation'.$i.'"/>';
-								$i = $i+1;
-								echo'</form>';
+								if(date("Y-m-d") > $donnees['DateSortie']){
+									echo'<a href="panier.php?ajouter='.$donnees['indice'].'">Reserver</a>';
+								}else{
+									echo"Cet article n'est pas encore disponible";
+								}
+								
 								echo '</div>';
 								echo '<div class= "descr"> <span class="souligne"> Description:</span> ';
 								echo $donnees[1];
@@ -84,23 +87,6 @@
 
 								
 									
-								}
-
-
-								$j = $i;
-								$i = 0;
-								while($i < $j){
-									if(isset($_POST["Reservation".$i.""])) 
-									{
-										$Requete = "SELECT `Nom` FROM `FC_grp3_Jeux` WHERE `indice`='".$i."';";
-										$Reponse = mysql_query($Requete);
-										while ($donnees = mysql_fetch_array($Reponse))
-										{	
-											$_SESSION["Nom"]= $donnees[0];
-
-										}
-									}
-									$i = $i + 1;
 								}
 
 					?>

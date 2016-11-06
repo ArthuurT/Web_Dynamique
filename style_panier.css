@@ -146,6 +146,7 @@ section
 	font-family: ComicSansMS;
 	margin-bottom: 10px;
 	background-color: #293133;
+	padding-bottom: 30px;
 }
 
 .fond
@@ -158,6 +159,37 @@ h1.panier
 {
 	color:#77CCEE;
 	text-align: center;
+}
+
+.content
+{
+	text-align: center;
+}
+
+th,td{
+	padding-right: 80px;
+	text-align: center;
+}
+
+.modif_panier
+{
+	color:white;
+}
+
+#table_panier
+{
+margin-left: 30%;
+}
+
+#reserver_link
+{
+	margin-top:20px;
+
+}
+
+#reserver_texte
+{
+	color:white;
 }
 
 
