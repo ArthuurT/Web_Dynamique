@@ -60,11 +60,11 @@
 					<tr class="entete">
 
 						<td>
-							Nouveautés
+							Selection Du Jour
 						</td>
 
 						<td>
-							Populaires
+							A Venir
 						</td>
 
 						<td>
@@ -76,27 +76,61 @@
 					<tr class="zone">
 
 						<td class="contenu">
-							<p> </p>
+							<p> 
+
+							</p>
 						</td>
 
 						<td class="contenu">
-							<p>	</p>
+							<p>	
+							<?php
+								require 'config.php';
+								$Requete = "SELECT * FROM `FC_grp3_Jeux` ORDER BY `Indice`;";
+								$Reponse = mysql_query($Requete);
+								$nb_jeux = 0;
+							
+								while ($donnees = mysql_fetch_array($Reponse))
+								{
+									if($nb_jeux >= 2){
+										echo '<hr/>';
+									}	
+									if(date("Y-m-d") < $donnees['DateSortie']){
+										$nb_jeux = $nb_jeux + 1;
+										echo '<br/>'.$donnees[0].'<br/>';
+									}
+									if($nb_jeux == 1){
+										echo '<hr/>';
+									}	
+									
+								}
+
+							?>
+							</p>
 						</td>
 
 						<td class="contenu">
 							<p>
 							<?php
-
 								require 'config.php';
-								$Requete = "SELECT * FROM `FC_grp3_Jeux`;";
+								$Requete = "SELECT * FROM `FC_grp3_Jeux` ORDER BY `Indice`;";
 								$Reponse = mysql_query($Requete);
+								$nb_jeux = 0;
 							
 								while ($donnees = mysql_fetch_array($Reponse))
 								{
-								echo $donnees['Nom']." ";
-								echo "<br/>";
+									if($nb_jeux >= 2 ){
+										echo '<hr/>';
+									}	
+									if(date("Y-m-d") > $donnees['DateSortie']){
+										$nb_jeux = $nb_jeux + 1;
+										echo '<br/>'.$donnees[0].'<br/>';
+									}
+									if($nb_jeux == 1){
+										echo '<hr/>';
+									}	
+									
+								}
 
-							}
 							?>
 							</p>
 						</td>

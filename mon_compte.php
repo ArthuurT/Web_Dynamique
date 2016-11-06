@@ -48,10 +48,8 @@
 		
 			<section class="intro">
 
-				<p>
 						<h1 class="contact"> MON COMPTE </h1>  <br/><br/>
-				</p>
-
+				
 				<form method="post">
 				<div class="total">
 
@@ -66,7 +64,9 @@
 													?> <br/><br/>
 
 							mon mot de passe     : <?php if(isset($_POST["modifier"])){
-															echo'<input type="password" name="passwd" value="'.$_SESSION["motdepasse"].'">';
+															echo'<input type="password" name="passwd" value="'.$_SESSION["motdepasse"].'"><br/><br/>';
+															echo'confirmer le mot de passe :';
+															echo'<input type="password" name="conf_passwd" value="'.$_SESSION["motdepasse"].'"> ';
 
 														}else{
 																echo ' '.$_SESSION['motdepasse'].'';
@@ -91,10 +91,10 @@
 														} 
 													?> <br/>
 						</p>
+						<p class='ad_modif'>
 							mon adresse est :<br/>
 							
 							<?php if(isset($_POST["modifier"])){
-											echo"<p class='ad_modif'>";
 											echo"rue : ";
 											echo'<input type="text" name="rue" value="'.$_SESSION["adresse_rue"].'"><br/>';
 										}else{
@@ -159,8 +159,9 @@
 							echo "<script type='text/javascript'>document.location.replace('main.php');</script>";
 						}
 						if(isset($_POST["envoyer"])){
-							
-                            mysql_query ( " UPDATE FC_grp3_Clients SET
+							if($_POST["passwd"] == $_POST["conf_passwd"]){
+
+								mysql_query ( " UPDATE FC_grp3_Clients SET
 										adresse_mail='".$_POST["ident"]."',
 										motdepasse='".$_POST["passwd"]."',
 										prenom='".$_POST["prenom"]."',
@@ -173,13 +174,21 @@
 										WHERE id='".$_SESSION["id"]."'");
 
 
-							// date_de_naissance = '".$_POST["jour"]."/".$_POST["mois"]."/".$_POST["an"]."',
-							//a rajouter apres nom dans la requete si besoin
+								// date_de_naissance = '".$_POST["jour"]."/".$_POST["mois"]."/".$_POST["an"]."',
+								//a rajouter apres nom dans la requete si besoin
 
 
-							session_destroy();
+								session_destroy();
 
-							echo "<script type='text/javascript'>document.location.replace('connexion.php');</script>";
+								echo "<script type='text/javascript'>document.location.replace('connexion.php');</script>";
+
+							}else{
+								echo '<p class="commentaire">';
+								echo 'Le mot de passe et sa confirmation sont inégale';
+								echo '<br/>';
+								echo '</p>';
+							}
+                            
 						}
 
 					?>
