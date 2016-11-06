@@ -71,4 +71,3 @@
 				</ul>
 	</footer>
 </html>
-<?php session_destroy(); ?>
