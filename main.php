@@ -77,7 +77,25 @@
 
 						<td class="contenu">
 							<p> 
+								<?php
+								require 'config.php';
+								$Requete = "SELECT * FROM `FC_grp3_Jeux` ORDER BY `Indice`;";
+								$Reponse = mysql_query($Requete);
+								$nb_jeux = 0;
+							
+								while ($donnees = mysql_fetch_array($Reponse))
+								{
+									
+									if(date("Y-m-d") == $donnees['DateSortie']){
+										if($nb_jeux > 0 ){
+											echo '<hr/>';
+										}	
+										$nb_jeux = $nb_jeux + 1;
+										echo '<br/>'.$donnees[0].'<br/>';
+									}
+								}
 
+							?>
 							</p>
 						</td>
 
@@ -91,17 +109,14 @@
 							
 								while ($donnees = mysql_fetch_array($Reponse))
 								{
-									if($nb_jeux >= 2){
-										echo '<hr/>';
-									}	
+									
 									if(date("Y-m-d") < $donnees['DateSortie']){
+										if($nb_jeux > 0){
+											echo '<hr/>';
+										}	
 										$nb_jeux = $nb_jeux + 1;
 										echo '<br/>'.$donnees[0].'<br/>';
 									}
-									if($nb_jeux == 1){
-										echo '<hr/>';
-									}	
-									
 								}
 
 							?>
@@ -118,17 +133,14 @@
 							
 								while ($donnees = mysql_fetch_array($Reponse))
 								{
-									if($nb_jeux >= 2 ){
-										echo '<hr/>';
-									}	
+									
 									if(date("Y-m-d") > $donnees['DateSortie']){
+										if($nb_jeux > 0 ){
+											echo '<hr/>';
+										}	
 										$nb_jeux = $nb_jeux + 1;
 										echo '<br/>'.$donnees[0].'<br/>';
 									}
-									if($nb_jeux == 1){
-										echo '<hr/>';
-									}	
-									
 								}
 
 							?>

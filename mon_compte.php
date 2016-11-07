@@ -85,7 +85,44 @@
 														} 
 													?> <br/><br/>
 							ma date de naissance : <?php if(isset($_POST["modifier"])){
-															echo " a copier se qu'il y a inscription";
+
+															echo '<select name="jour" size="1">';
+					 										 $a= 1;
+					 										 echo '<option value="'.$a.'" selected="selected">  '.$a.'  </option>;';
+					 										 $a = $a + 1;
+																while($a <= 31){
+					 												echo '<option value="'.$a.'">  '.$a.'  </option>;';
+					 												$a = $a + 1;
+					 											}
+					 										
+															echo '</select>';
+
+															echo '<select name="mois" size="1">
+																<option value="01" selected="selected">Janvier</option>
+																<option value="02">Février</option>
+																<option value="03">Mars</option>
+																<option value="04">Avril</option>
+																<option value="05">Mai</option>
+																<option value="06">Juin</option>
+																<option value="07">Juillet</option>
+																<option value="08">Août</option>
+																<option value="09">Septembre</option>
+																<option value="10">Octobre</option>
+																<option value="11">Novembre</option>
+																<option value="12">Décembre</option>
+															</select>';
+
+															echo '<select name="an" size="1">';
+
+					 										 $a = date("Y");
+					 										 echo '<option value="'.$a.'" selected="selected">  '.$a.'  </option>;';
+					 										 $a = $a - 1;
+																while($a >= date("Y")-100){
+					 												echo '<option value="'.$a.'">  '.$a.'  </option>;';
+					 												$a = $a - 1;
+					 											}
+					 										
+															echo '</select>';
 														}else{
 																echo ' '.$_SESSION['date_de_naissance'].'';
 														} 
@@ -160,37 +197,39 @@
 						}
 						if(isset($_POST["envoyer"])){
 
+							$an_min = date("Y") -18;
+
 							if($_POST["passwd"] == $_POST["conf_passwd"]){
-
-								mysql_query ( " UPDATE FC_grp3_JeuxLudotheque SET
-
-										adresse_mail='".$_POST["ident"]."',
-										motdepasse='".$_POST["passwd"]."',
-										prenom='".$_POST["prenom"]."',
-										nom='".$_POST["nom"]."',
-										adresse_rue='".$_POST["rue"]."',
-										adresse_cp ='".$_POST["cp"]."',
-										adresse_ville='".$_POST["ville"]."',
-										adresse_pays='".$_POST["pays"]."',
-										phone='".$_POST["phone"]."'
-										WHERE id='".$_SESSION["id"]."'");
+								if($_POST["an"]<$an_min || (($_POST["an"]=$an_min) && ($_POST["mois"]<date('m'))) || (($_POST["mois"]=date('m')) && ($_POST["jour"]<=date('d'))) ){
 
 
-								// date_de_naissance = '".$_POST["jour"]."/".$_POST["mois"]."/".$_POST["an"]."',
-								//a rajouter apres nom dans la requete si besoin
+									mysql_query ( " UPDATE FC_grp3_Clients SET
 
+											adresse_mail='".$_POST["ident"]."',
+											motdepasse='".$_POST["passwd"]."',
+											prenom='".$_POST["prenom"]."',
+											nom='".$_POST["nom"]."',
+											date_de_naissance='".$_POST["jour"]."/".$_POST["mois"]."/".$_POST["an"]."',
+											adresse_rue='".$_POST["rue"]."',
+											adresse_cp ='".$_POST["cp"]."',
+											adresse_ville='".$_POST["ville"]."',
+											adresse_pays='".$_POST["pays"]."',
+											phone='".$_POST["phone"]."'
+											WHERE id='".$_SESSION["id"]."'");
 
-								session_destroy();
+									session_destroy();
 
-								echo "<script type='text/javascript'>document.location.replace('connexion.php');</script>";
+									echo "<script type='text/javascript'>document.location.replace('connexion.php');</script>";
 
-							}else{
-								echo '<p class="commentaire">';
-								echo 'Le mot de passe et sa confirmation sont inégale';
-								echo '<br/>';
-								echo '</p>';
-							}
-                            
+								}else{
+									echo '<p class="commentaire">';
+									echo 'Le mot de passe et sa confirmation sont inégale';
+									echo '<br/>';
+									echo "Votre date de naissance n'est pas valide";
+									echo '<br/>';
+									echo '</p>';
+								}
+                            }
 						}
 
 					?>

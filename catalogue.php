@@ -69,7 +69,7 @@
 								echo '<br/><br/>';
 								echo '<span class="souligne"> Nombre de joueurs (min-max):</span> '.$donnees[4].'-'.$donnees[5].'';
 								echo '<br/><br/>';
-								if(date("Y-m-d") > $donnees['DateSortie']){
+								if(date("Y-m-d") >= $donnees['DateSortie']){
 									echo'<a class="envoyer" href="panier.php?ajouter='.$donnees['indice'].'">Reserver</a>';
 								}else{
 									echo"Cet article n'est pas encore disponible";
