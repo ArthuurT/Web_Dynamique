@@ -160,7 +160,7 @@
 						}
 						if(isset($_POST["envoyer"])){
 							
-                            mysql_query ( " UPDATE FC_grp3_Clients SET
+                            mysql_query ( " UPDATE FC_grp3_JeuxLudotheque SET
 										adresse_mail='".$_POST["ident"]."',
 										motdepasse='".$_POST["passwd"]."',
 										prenom='".$_POST["prenom"]."',

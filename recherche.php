@@ -116,8 +116,11 @@
 								echo '<br/><br/>';
 								echo '<span class="souligne"> Nombre de joueurs (min-max):</span> '.$donnees[4].'-'.$donnees[5].'';
 								echo '<br/><br/>';
-								echo'<form class="reserv" method="post">';
-								echo'</form>';
+								if(date("Y-m-d") > $donnees['DateSortie']){
+									echo'<a class="envoyer" href="panier.php?ajouter='.$donnees['indice'].'">Reserver</a>';
+								}else{
+									echo"Cet article n'est pas encore disponible";
+								}
 								echo '</div>';
 								echo '<div class= "descr"> <span class="souligne"> Description:</span> ';
 								echo $donnees[1];

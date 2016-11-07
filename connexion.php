@@ -54,7 +54,7 @@
 					{
 						if(!empty($_POST["ident"])&&!empty($_POST["passwd"]))
 						{
-							$Requete = mysql_query('SELECT * FROM FC_grp3_Clients WHERE adresse_mail LIKE "'. $_POST["ident"].'" AND motdepasse LIKE "'.$_POST["passwd"].'" ');
+							$Requete = mysql_query('SELECT * FROM FC_grp3_JeuxLudotheque WHERE adresse_mail LIKE "'. $_POST["ident"].'" AND motdepasse LIKE "'.$_POST["passwd"].'" ');
 							if(mysql_num_rows($Requete) == 0)
 							{
 								echo "<p class='commentaire'>vous n'avez pas de compte veuiller en créer un</p><br/>";

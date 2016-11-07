@@ -21,7 +21,7 @@
 			<div class="slogan">
 				La ludothèque libre pour tous !
 			</div>
-			<div class="conecter">
+			<div class="connecter">
 				<?php if(isset($_SESSION['prenom'])){ echo 'Bonjour '.$_SESSION['nom'].' '.$_SESSION['prenom'].'';}?>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 								echo '<span class="souligne"> Nombre de joueurs (min-max):</span> '.$donnees[4].'-'.$donnees[5].'';
 								echo '<br/><br/>';
 								if(date("Y-m-d") > $donnees['DateSortie']){
-									echo'<a href="panier.php?ajouter='.$donnees['indice'].'">Reserver</a>';
+									echo'<a class="envoyer" href="panier.php?ajouter='.$donnees['indice'].'">Reserver</a>';
 								}else{
 									echo"Cet article n'est pas encore disponible";
 								}

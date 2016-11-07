@@ -59,6 +59,7 @@
 								return $total;
 							}
 
+
 							if(!isset($_SESSION['panier'])){ //creation du panier sous forme de tableau
 								$_SESSION['panier'] = array();
 								$_SESSION['panier']['produit'] = array();
@@ -151,6 +152,8 @@
 										echo "\n\n</table>";
 										echo '<div id="reserver_link"><a href="reserver.php" id="reserver_ecrit">Réserver</a></div>';
 									}
+		
+									$_SESSION["TOT_PAN"] = get_nb_produit_panier();
 
 										
 							?>

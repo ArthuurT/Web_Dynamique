@@ -7,11 +7,13 @@ html {
 	height: 100%;
 	background-color: #77CCEE;
 	width:1300px;
+	margin:auto;
 }
 body
 {
 	min-height: 100%;
 	position: relative;
+  	padding:10px;
 }
 
 /*                            ==============
@@ -35,13 +37,13 @@ div.slogan
 
 }
 
-div.conecter
+div.connecter
 {
 	position: relative;
 	float: right;
-    width:50%;
-    text-align: left;
-    left: 27%;
+   	width:50%;
+  	text-align: left;
+  	left: 27%;
 }
 
 #logo
@@ -135,22 +137,16 @@ section
 {
 	margin-left: 10%;
 	margin-right: 10%;
+	
 }
 
 .intro
 {
 	color:white;
 	font-size: 15px;
-	font-family: Arial;
 	margin-bottom: 10px;
 	background-color: #293133;
 	padding-top: 1%;
-}
-
-.fond
-{
-	font-size: 15px;
-	font-family: georgia;
 }
 
 .img_cata
@@ -188,12 +184,15 @@ h2
 	color:#77CCEE; 
 }
 
-input[type="submit"]{
- cursor:pointer;
- background-color: black;
- color:#77CCEE;
-}
+.envoyer:link {color: #77CCEE;}
+.envoyer:visited {color: #77CCEE;}
+.envoyer:hover {color: #77CCEE;}
+.envoyer:focus {color: #77CCEE;}
+.envoyer:active {color: #77CCEE;}
 
+.envoyer{
+	margin-left:40%;
+}
 
 
 
@@ -206,14 +205,13 @@ footer
 {
 	border-radius: 5px;
 	position: absolute;
-	width: 80%;
+	width: 79%;
 	display: table-row;
 	text-align: center;
 	margin-top: 2%;
 	margin-left: 10%;
 	color: white;
 	background-color: #293133;
-
 }
 li.menu_logo_gauche
 {

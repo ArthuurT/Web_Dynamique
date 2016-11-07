@@ -7,11 +7,14 @@ html {
 	height: 100%;
 	background-color: #77CCEE;
 	width:1300px;
+	margin:auto;
 }
-body 
+body
 {
 	min-height: 100%;
 	position: relative;
+  	padding:0px;
+
 }
 
 /*                            ==============
@@ -122,11 +125,16 @@ a.lien_menu
 
 
 
-input.envoyer:link {color: #009900;}
-input.envoyer:visited {color: #999999;}
-input.envoyer:hover {color: #77CCEE;}
-input.envoyer:focus {color: #77CCEE;}
-input.envoyer:active {color: #77CCEE;}
+.envoyer:link {color: #77CCEE;}
+.envoyer:visited {color: #77CCEE;}
+.envoyer:hover {color: #77CCEE;}
+.envoyer:focus {color: #77CCEE;}
+.envoyer:active {color: #77CCEE;}
+
+.envoyer
+{
+	margin-left:40%;
+}
 
 
 
@@ -200,7 +208,7 @@ div.gauche
 .img_cata
 {
 	height: 200px;
-	margin-left: 15%;
+	margin-left: 10%;
 }
 
 h2
@@ -213,8 +221,8 @@ h2
 .carac
 {
 	position: absolute;
-	margin-left: 50%;
-	margin-top: 11%;
+	margin-left: 40%;
+	margin-top: 16%;
 	font-family: ComicSansMS;
 
 }
