@@ -128,7 +128,7 @@
 									?> <br/><br/>
 							
 							mon téléphone est    : <?php if(isset($_POST["modifier"])){
-															echo'<input type="text" name="phone" value="'.$_SESSION["phone"].'">';
+															echo'<input type="text" name="phone" value="0'.$_SESSION["phone"].'">';
 														}else{
 															echo ' 0'.$_SESSION['phone'].'';
 														} 
@@ -168,7 +168,7 @@
 							$an_min = date("Y") -18;
 
 							if($_POST["passwd"] == $_POST["conf_passwd"]){
-								if($_POST["an"]<$an_min || (($_POST["an"]=$an_min) && ($_POST["mois"]<date('m'))) || (($_POST["mois"]=date('m')) && ($_POST["jour"]<=date('d'))) ){
+								if($_POST["an"]<$an_min || (($_POST["an"]==$an_min) && ($_POST["mois"]<date('m'))) || (($_POST["mois"]==date('m')) && ($_POST["jour"]<=date('d'))) ){
 
 
 									mysql_query ( " UPDATE FC_grp3_Clients SET
@@ -191,12 +191,13 @@
 
 								}else{
 									echo '<p class="commentaire">';
-									echo 'Le mot de passe et sa confirmation sont inégale';
-									echo '<br/>';
 									echo "Votre date de naissance n'est pas valide";
-									echo '<br/>';
 									echo '</p>';
 								}
+                            }else{
+                            	echo '<p class="commentaire">';
+                            	echo 'Le mot de passe et sa confirmation sont inégale';
+								echo '</p>';
                             }
 						}
 

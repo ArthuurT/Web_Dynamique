@@ -105,7 +105,7 @@
 				{
 					if(!empty($_POST["ident"])&&!empty($_POST["passwd"])&&!empty($_POST["conf_passwd"])&&($_POST["passwd"]==$_POST["conf_passwd"])&&!empty($_POST["media"])&&!empty($_POST["nom"])&&!empty($_POST["prenom"])&&!empty($_POST["jour"])&&!empty($_POST["mois"])&&!empty($_POST["an"])&&!empty($_POST["rue"])&&!empty($_POST["ville"])&&!empty($_POST["pays"])&&!empty($_POST["phone"]))
 					{
-						if($_POST["an"]<$an_min || (($_POST["an"]=$an_min) && ($_POST["mois"]<date('m'))) || (($_POST["mois"]=date('m')) && ($_POST["jour"]<=date('d'))) ){
+						if($_POST["an"]<$an_min || (($_POST["an"]==$an_min) && ($_POST["mois"]<date('m'))) || (($_POST["mois"]==date('m')) && ($_POST["jour"]<=date('d'))) ){
 
 
 							$id = NULL;
