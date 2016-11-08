@@ -9,7 +9,7 @@
 		<link rel="shortcut icon" href="Images/logo_blue_onglet.ico">
 
 
-	</head>
+</head>
 <?php include 'header.php'; ?>
 
 			<section class="intro">

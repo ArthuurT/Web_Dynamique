@@ -14,8 +14,10 @@
 
 			<section class="intro">
 
-				<p> Bonjour et bienvenue sur le site de la ludothèque par kirozz et WarNN <br/> <br/> <br/><br/>
-					Le site est vide, veuillez patientez </p>
+				<p> Bonjour et bienvenue sur le site de la ludothèque Minetek. Nous sommes ouvert du Lundi au Vendredi de 8h à 18h sur l'Avenue Olivier Messiaen au Mans. Pour tous renseignements n'hésitez pas à nous appeler au 06 00 00 00 00. Bonne visite sur notre site, en esperant que vous trouverez votre bonheur.<br/><br/>
+
+				Trottier Arthur et Florian Sebille<br/>
+				WebMaster du site		</p>
 
 			</section>
 

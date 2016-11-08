@@ -119,8 +119,6 @@
 										echo "\n\n</table>";
 										echo '<div id="reserver_link"><a href="reserver.php" id="reserver_ecrit">Réserver</a></div>';
 									}
-		
-									$_SESSION["TOT_PAN"] = get_nb_produit_panier();
 
 										
 							?>

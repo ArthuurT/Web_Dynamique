@@ -15,7 +15,6 @@
 		
 			<section class="intro">
 
-				<p>
 						<h1 class="contact"> REGLEMENT</h1>  <br/><br/>
 				</p>
 
@@ -46,6 +45,6 @@
 					</p>
 					<p>
 						9 et 10 Tu ne convoiteras pas la maison de ton prochain ; tu ne convoiteras pas la femme de ton prochain, ni son serviteur, ni sa servante, ni son boeuf, ni son âne : rien de ce qui lui appartient. »
-					</p>
+						</p>
 			</section>
 <?php include 'footer.php'; ?>
