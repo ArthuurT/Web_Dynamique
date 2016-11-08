@@ -171,7 +171,7 @@
 								if($_POST["an"]<$an_min || (($_POST["an"]==$an_min) && ($_POST["mois"]<date('m'))) || (($_POST["mois"]==date('m')) && ($_POST["jour"]<=date('d'))) ){
 
 
-									mysql_query ( " UPDATE FC_grp3_Clients SET
+									mysql_query ( " UPDATE FC_grp3_JeuxLudotheque SET
 
 											adresse_mail='".$_POST["ident"]."',
 											motdepasse='".$_POST["passwd"]."',
